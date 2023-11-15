@@ -16,25 +16,18 @@ class Login extends Component{
     render(){
         if(this.context.token === ''){
             return(
-                <div className='align-valign-center'>
-                    <h2 className='text-center'>ADMIN LOGIN</h2>
-                    <form>
-                        <table className='align-center'>
-                            <tbody>
-                                <tr>
-                                    <td>Username</td>
-                                    <td><input type='text' value={ this.state.txtUsername } onChange={(e) => { this.setState({ txtUsername: e.target.value}) }} /></td>
-                                </tr>
-                                <tr>
-                                    <td>Password</td>
-                                    <td><input type='password' value={ this.state.txtPassword } onChange={(e) => { this.setState({ txtPassword: e.target.value }) }} /></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td><input type='submit' value="LOGIN" onClick={(e) => this.btnLoginClick(e)} /></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                <div className='login-container'>
+                    <form className='form-signin'>
+                        <h1 class="h3 mb-3 fw-normal text-center">Admin Login</h1>
+                        <div class="form-floating mt-2">
+                        <input type="text" class="form-control" id="floatingUsername" placeholder="username" value={ this.state.txtUsername } onChange={(e) => { this.setState({ txtUsername: e.target.value}) }} />
+                        <label for="floatingUsername">Username</label>
+                        </div>
+                        <div class="form-floating mt-2">
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" value={ this.state.txtPassword } onChange={(e) => { this.setState({ txtPassword: e.target.value }) }} />
+                            <label for="floatingPassword">Password</label>
+                        </div>
+                        <button class="w-100 btn btn-lg btn-primary mt-4" type="submit" onClick={(e) => this.btnLoginClick(e)}>Sign in</button>
                     </form>
                 </div>
             );

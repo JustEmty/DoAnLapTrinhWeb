@@ -1,0 +1,68 @@
+/* LoginComponent */
+
+.login-container{
+    background-color: #F8F0E5;
+    max-width: 50vw;
+    max-height: 42vh;
+    padding: 2rem;
+    margin: 18vh auto 2vh;
+    border: 1px solid black;
+    border-radius: 1rem;
+}
+
+.login-container h1{
+    color: #0F2C59;
+}
+
+.login-container button{
+    background-color: #0F2C59;
+}
+
+.login-container button:hover{
+    background-color: #DAC0A3;
+    color: #0F2C59;
+    border: 2px solid #0F2C59;
+}
+
+/* MenuComponent */
+.menu-header{
+    background-color: #EADBC8;
+    margin-bottom: 2em;
+}
+
+.text-dark-blue{
+    color: #0F2C59;
+}
+
+.text-dark-blue:hover{
+    color: #EADBC8;
+}
+
+.menu-header li{
+    margin: 0% .2em;
+    width: 5.1em;
+    text-align: center;
+    border-radius: .5em;
+}
+
+.menu-header li:hover{
+    background-color: #0F2C59;
+    transition: all 0.25s ease-in-out;
+}
+
+.logout-button{
+    background-color: #0F2C59;
+}
+
+.logout-button:hover{
+    background-color: #DAC0A3;
+    border: 2px solid #0F2C59;
+}
+
+.logout-text{
+    color: #EADBC8;
+}
+
+.logout-text:hover{
+    color: #0F2C59;
+}

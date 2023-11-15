@@ -22,6 +22,11 @@ class Category extends Component {
                     <td>{ item._id }</td>
                     <td>{ item.name }</td>
                 </tr>
+                // <ul class="list-group list-group-horizontal" key ={ item._id } className="datatable" onClick={() => this.trItemClick(item)}>
+                //     <li class="list-group-item">{ item._id }</li>
+                //     <li class="list-group-item">{ item.name }</li>
+                //     <li class="list-group-item">A third item</li>
+                // </ul>
             );
         });
         return (
