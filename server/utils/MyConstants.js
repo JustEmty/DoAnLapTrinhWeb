@@ -4,7 +4,7 @@ const MyConstants = {
     DB_PASS: 'BO123456',
     DB_DATABASE: 'shoppingbook',
     EMAIL_USER: 'thanhhau1912003@gmail.com', // Microsoft mail service
-    EMAIL_PASS: 'Hau19012003',
+    EMAIL_PASS: 'whwhergbpmzgajxi',
     JWT_SECRET: 'admin',
     JWT_EXPIRES: '1000000000000000000000', // in milliseconds10 
 };
