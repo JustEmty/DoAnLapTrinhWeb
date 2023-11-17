@@ -10,7 +10,7 @@ class Menu extends Component{
             <header class="p-3 menu-header">
                  <div class="container">
                      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                         <ul class="nav col-12 ol-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                              <li><Link to="/admin/home" class="nav-link px-2 text-dark-blue">Home</Link></li>
                              <li><Link to="/admin/category" class="nav-link px-2 text-dark-blue">Category</Link></li>
                              <li><Link to="/admin/product" class="nav-link px-2 text-dark-blue">Product</Link></li>
