@@ -1,0 +1,38 @@
+/* MenuComponent */
+.menu-header{
+    background-color: #EADBC8;
+    margin-bottom: 2em;
+}
+
+.text-dark-blue{
+    color: #0F2C59;
+    text-decoration: none;
+}
+
+.text-dark-blue:hover{
+    color: #EADBC8;
+}
+
+.menu-header li{
+    margin: 0% .2em;
+    width: 5.1em;
+    text-align: center;
+    border-radius: .5em;
+}
+
+.menu-header li:hover{
+    background-color: #0F2C59;
+    transition: all 0.25s ease-in-out;
+}
+
+.btn-search{
+    width: 130px;
+    color: #0F2C59;
+    border: 1px solid #0F2C59;
+}
+
+.btn-search:hover{
+    background-color: #0F2C59;
+    transition: all 0.25s ease-in-out;
+    color: #EADBC8;
+}
