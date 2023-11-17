@@ -8,4 +8,4 @@ const MyConstants = {
     JWT_SECRET: 'admin',
     JWT_EXPIRES: '1000000000000000000000', // in milliseconds10 
 };
-module.exports = MyConstants;
+module.exports = MyConstants; 
