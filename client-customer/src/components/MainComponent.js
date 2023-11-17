@@ -16,8 +16,8 @@ class Main extends Component {
     render(){
         return (
             <div className="body-customer">
-                <Menu />
                 <Inform />
+                <Menu />
                 <Routes>
                     <Route path='/' element={<Navigate replace to='/home' />} />
                     <Route path='/home' element={<Home />} />

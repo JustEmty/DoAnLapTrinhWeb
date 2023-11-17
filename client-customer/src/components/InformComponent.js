@@ -8,18 +8,12 @@ class Inform extends Component {
 
     render () {
         return (
-            <div className="border-bottom">
-                <div className="float-left">
-                    { this.context.token === '' ?
-                        <div><Link to='/login'>Login</Link> | <Link to='/signup'>Sign-up</Link> | <Link to='/active'>Active</Link></div>
-                        :
-                        <div>Hello <b>{ this.context.customer.name }</b> | <Link to='/home' onClick={() => this.lnkLogoutClick()}>Logout</Link> | <Link to='/myprofile'>My profile</Link> | <Link to='/myorders'>My orders</Link></div>
-                    }
-                </div>
-                <div className="float-right">
-                    <Link to='/mycart'>My cart</Link> have <b>{this.context.mycart.length}</b> items
-                </div>
-                <div className="float-clear" />
+            <div class="d-flex flex-row mb-2 inform-container">
+                { this.context.token === '' ?
+                    <div className='flex-container'><Link to='/login' className='nav-link login'>Đăng nhập</Link> <Link to='/signup' className='nav-link sign-up'>Đăng ký</Link> <Link to='/active' className='nav-link active'>Xác nhận tài khoản</Link></div>
+                    :
+                    <div className='flex-container'>Xin chào &nbsp;<b className='hello'>{ this.context.customer.name }</b> <Link to='/myprofile' className='nav-link my-profile'>Tài khoản</Link> <Link to='/myorders' className='nav-link my-orders'>Đơn hàng</Link> <Link to='/home' className='nav-link logout' onClick={() => this.lnkLogoutClick()}>Đăng xuất</Link></div>
+                }
             </div>
         );
     }

@@ -36,3 +36,85 @@
     transition: all 0.25s ease-in-out;
     color: #EADBC8;
 }
+
+.nav-menu{
+    width: 85%;
+    border-radius: 0.8em;
+    margin: 10px auto 0;
+    height: 4.5em;
+    margin-bottom: 5vh;
+}
+@media screen and (max-width: 1300px) {
+    .nav-menu{
+        width: 85%;
+        border-radius: 0.8em;
+        margin: 10px auto 0;
+        height: 100%;
+    }
+}
+
+.navbar-brand{
+    width: 15%;
+}
+
+.nav-client-customer{
+    width: 50%;
+    margin: auto;
+}
+
+.nav-item{
+    margin: 20px;
+    color: black;
+    font-weight: 600;
+}
+
+.btn-outline-success{
+    width: 130px;
+}
+
+.d-flex{
+    width: 30%;
+}
+
+.inform-container{
+    width: 85%;
+    margin: 10px auto;
+    justify-content: end;
+}
+
+.flex-container{
+    display: flex;
+}
+
+.sign-up{
+    margin-right: 25px;
+}
+
+.login{
+    margin-right: 25px;
+}
+
+.hello{
+    margin-right: 125vh;
+}
+
+.my-profile{
+    margin-right: 25px;
+}
+
+.my-orders{
+    margin-right: 25px;
+}
+
+div.inline{
+    display: inline-block;
+}
+
+.align-center{
+    width: fit-content;
+    margin: 0px auto;
+}
+
+.item-picture{
+    margin-left: 50px;
+}
