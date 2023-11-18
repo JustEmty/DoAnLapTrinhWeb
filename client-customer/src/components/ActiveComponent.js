@@ -13,25 +13,18 @@ class Active extends Component {
  
     render(){
         return(
-            <div className="align-center">
-                <h2 className="text-center">ACTIVE ACCOUNT</h2>
-                <form>
-                    <table className="align-center">
-                        <tbody>
-                            <tr>
-                                <td>ID</td>
-                                <td><input type="text" value={ this.state.txtID } onChange={(e) => { this.setState ({ txtID: e.target.value }) }} /></td>
-                            </tr>
-                            <tr>
-                                <td>Token</td>
-                                <td><input type="text" value={ this.state.txtToken } onChange={(e) => { this.setState ({ txtToken: e.target.value }) }} /></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td><input type="submit" value="ACTIVE" onClick={(e) => this.btnActiveClick(e) } /></td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <div className='active-container'>
+                <form className='form-active'>
+                    <h1 class="h3 mb-3 fw-normal text-center">Xác thực tài khoản</h1>
+                    <div class="form-floating mt-2">
+                        <input type="text" class="form-control" id="floatingID" placeholder="ID" value={ this.state.txtID } onChange={(e) => { this.setState ({ txtID: e.target.value }) }} />
+                        <label for="floatingID">ID</label>
+                    </div>
+                    <div class="form-floating mt-2">
+                        <input type="text" class="form-control" id="floatingToken" placeholder="Token" value={ this.state.txtToken } onChange={(e) => { this.setState ({ txtToken: e.target.value }) }} />
+                        <label for="floatingToken">Token</label>
+                    </div>
+                    <button class="w-100 btn btn-lg btn-warning mt-4" type="submit" onClick={(e) => this.btnActiveClick(e) }>Xác thực</button>
                 </form>
             </div>
         );

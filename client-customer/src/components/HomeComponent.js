@@ -45,7 +45,7 @@ class Home extends Component {
                         {hotprods}
                     </div>
                 : <div />}
-            </div>
+            </div>  
         );
     }
 

@@ -17,25 +17,18 @@ class Login extends Component {
 
     render(){
         return(
-            <div className="align-center">
-                <h2 className="text-center">CUSTOMER LOGIN</h2>
-                <form>
-                    <table className="align-center">
-                        <tbody>
-                            <tr>
-                                <td>Username</td>
-                                <td><input type="text" value={ this.state.txtUsername } onChange={(e) => { this.setState({ txtUsername: e.target.value }) }} /></td>
-                            </tr>
-                            <tr>
-                                <td>Password</td>
-                                <td><input type="password" value={ this.state.txtPassword } onChange={(e) => { this.setState({ txtPassword: e.target.value }) }} /></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td><input type="submit" value="LOGIN" onClick={(e) => this.btnLoginClick(e) } /></td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <div className='login-container'>
+                <form className='form-login'>
+                    <h1 class="h3 mb-3 fw-normal text-center">Đăng nhập</h1>
+                    <div class="form-floating mt-2">
+                        <input type="text" class="form-control" id="floatingUsername" placeholder="Username" value={ this.state.txtUsername } onChange={(e) => { this.setState({ txtUsername: e.target.value }) }} />
+                        <label for="floatingUsername">Tên đăng nhập</label>
+                    </div>
+                    <div class="form-floating mt-2">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password" value={ this.state.txtPassword } onChange={(e) => { this.setState({ txtPassword: e.target.value }) }} />
+                        <label for="floatingPassword">Mật khẩu</label>
+                    </div>
+                    <button class="w-100 btn btn-lg btn-warning mt-4" type="submit" onClick={(e) => this.btnLoginClick(e) } >Đăng nhập</button>
                 </form>
             </div>
         );

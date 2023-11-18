@@ -1,42 +1,4 @@
-/* MenuComponent */
-.menu-header{
-    background-color: #EADBC8;
-    margin-bottom: 2em;
-}
-
-.text-dark-blue{
-    color: #0F2C59;
-    text-decoration: none;
-}
-
-.text-dark-blue:hover{
-    color: #EADBC8;
-}
-
-.menu-header li{
-    margin: 0% .2em;
-    width: 5.1em;
-    text-align: center;
-    border-radius: .5em;
-}
-
-.menu-header li:hover{
-    background-color: #0F2C59;
-    transition: all 0.25s ease-in-out;
-}
-
-.btn-search{
-    width: 130px;
-    color: #0F2C59;
-    border: 1px solid #0F2C59;
-}
-
-.btn-search:hover{
-    background-color: #0F2C59;
-    transition: all 0.25s ease-in-out;
-    color: #EADBC8;
-}
-
+/*MenuComponent*/
 .nav-menu{
     width: 85%;
     border-radius: 0.8em;
@@ -76,6 +38,7 @@
     width: 30%;
 }
 
+/*InformComponent*/
 .inform-container{
     width: 85%;
     margin: 10px auto;
@@ -106,6 +69,7 @@
     margin-right: 25px;
 }
 
+/*HomeComponent*/
 div.inline{
     display: inline-block;
 }
@@ -117,4 +81,66 @@ div.inline{
 
 .item-picture{
     margin-left: 50px;
+}
+
+/*MainComponent*/
+.contain-first{
+    margin-top: 10vh;
+}
+@media screen and (max-width: 1300px) {
+    .contain-first{
+        height: 100%;
+    }
+}
+
+h5{
+    margin-left: 19px;
+}
+
+.footer-first{
+    height: 58vh;
+}
+
+/*ActiveComponent*/
+.active-container{
+    background-color: #F8F0E5;
+    max-width: 50vw;
+    max-height: 42vh;
+    padding: 2rem;
+    margin: 18vh auto 2vh;
+    border: 1px solid black;
+    border-radius: 1rem;
+}
+
+/*login-container*/
+.login-container{
+    background-color: #F8F0E5;
+    max-width: 50vw;
+    max-height: 42vh;
+    padding: 2rem;
+    margin: 18vh auto 2vh;
+    border: 1px solid black;
+    border-radius: 1rem;
+}
+
+/*myprofile-container*/
+.myprofile-container{
+    background-color: #F8F0E5;
+    max-width: 50vw;
+    max-height: 68vh;
+    padding: 2rem;
+    margin: 10vh auto 2vh;
+    border: 1px solid black;
+    border-radius: 1rem;
+}
+
+/*signup-container*/
+.signup-container{
+    background-color: #F8F0E5;
+    max-width: 50vw;
+    max-height: 68vh;
+    padding: 2rem;
+    margin: 10vh auto 2vh;
+    border: 1px solid black;
+    border-radius: 1rem;
 }
