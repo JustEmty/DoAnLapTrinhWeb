@@ -1,0 +1,56 @@
+form {
+    width: 300px;
+    margin: 20px auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+td.align-right {
+    text-align: right;
+}
+
+input[type="number"] {
+    width: 50px;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Optional: Add some styling to the form header */
+h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+/* Optional: Style the table rows for better readability */
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+/* styles.css */
+figure.caption-right{
+    display: flex;
+    align-items: center;
+}

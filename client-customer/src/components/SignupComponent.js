@@ -72,7 +72,7 @@ class Signup extends Component {
                         <input type="text" class="form-control" id="floatingEmail" placeholder="Email" value={ this.state.txtEmail } onChange={(e) => { this.setState({ txtEmail: e.target.value }) }} />
                         <label for="floatingEmail">Email</label>
                     </div>
-                    <button class="w-100 btn btn-lg btn-warning mt-4" type="submit" onClick={(e) => this.btnActiveClick(e) }>Đăng ký</button>
+                    <button class="w-100 btn btn-lg btn-warning mt-4" type="submit" onClick={(e) => this.btnSignupClick(e) }>Đăng ký</button>
                 </form>
             </div>
         );
