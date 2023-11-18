@@ -50,9 +50,9 @@ class Myorders extends Component {
             <div>
                 <div className="align-center">
                     <h2 className="text-center">ORDER LIST</h2>
-                    <table className="datatable" border="1">
+                    <table className="table table-bordered" border="1">
                         <tbody>
-                            <tr className="datatable">
+                            <tr className="table-dark">
                                 <th>ID</th>
                                 <th>Creation date</th>
                                 <th>Cust.name</th>
@@ -67,9 +67,9 @@ class Myorders extends Component {
                 { this.state.order ?
                     <div className="align-center">
                         <h2 className="text-center">ORDER DETAIL</h2>
-                        <table className="datatable" border ="1">
+                        <table className="table table-bordered" border ="1">
                             <tbody>
-                                <tr className="datatable">
+                                <tr className="table-dark">
                                     <th>No.</th>
                                     <th>Prod.ID</th>
                                     <th>Prod.name</th>
