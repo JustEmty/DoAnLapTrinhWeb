@@ -1,38 +1,146 @@
-/* MenuComponent */
-.menu-header{
-    background-color: #EADBC8;
-    margin-bottom: 2em;
+/*MenuComponent*/
+.nav-menu{
+    width: 85%;
+    border-radius: 0.8em;
+    margin: 10px auto 0;
+    height: 4.5em;
+    margin-bottom: 5vh;
+}
+@media screen and (max-width: 1300px) {
+    .nav-menu{
+        width: 85%;
+        border-radius: 0.8em;
+        margin: 10px auto 0;
+        height: 100%;
+    }
 }
 
-.text-dark-blue{
-    color: #0F2C59;
-    text-decoration: none;
+.navbar-brand{
+    width: 15%;
 }
 
-.text-dark-blue:hover{
-    color: #EADBC8;
+.nav-client-customer{
+    width: 50%;
+    margin: auto;
 }
 
-.menu-header li{
-    margin: 0% .2em;
-    width: 5.1em;
-    text-align: center;
-    border-radius: .5em;
+.nav-item{
+    margin: 20px;
+    color: black;
+    font-weight: 600;
 }
 
-.menu-header li:hover{
-    background-color: #0F2C59;
-    transition: all 0.25s ease-in-out;
-}
-
-.btn-search{
+.btn-outline-success{
     width: 130px;
-    color: #0F2C59;
-    border: 1px solid #0F2C59;
 }
 
-.btn-search:hover{
-    background-color: #0F2C59;
-    transition: all 0.25s ease-in-out;
-    color: #EADBC8;
+.d-flex{
+    width: 30%;
+}
+
+/*InformComponent*/
+.inform-container{
+    width: 85%;
+    margin: 10px auto;
+    justify-content: end;
+}
+
+.flex-container{
+    display: flex;
+}
+
+.sign-up{
+    margin-right: 25px;
+}
+
+.login{
+    margin-right: 25px;
+}
+
+.hello{
+    margin-right: 125vh;
+}
+
+.my-profile{
+    margin-right: 25px;
+}
+
+.my-orders{
+    margin-right: 25px;
+}
+
+/*HomeComponent*/
+div.inline{
+    display: inline-block;
+}
+
+.align-center{
+    width: fit-content;
+    margin: 0px auto;
+}
+
+.item-picture{
+    margin-left: 50px;
+}
+
+/*MainComponent*/
+.contain-first{
+    margin-top: 10vh;
+}
+@media screen and (max-width: 1300px) {
+    .contain-first{
+        height: 100%;
+    }
+}
+
+h5{
+    margin-left: 19px;
+}
+
+.footer-first{
+    height: 58vh;
+}
+
+/*ActiveComponent*/
+.active-container{
+    background-color: #F8F0E5;
+    max-width: 50vw;
+    max-height: 42vh;
+    padding: 2rem;
+    margin: 18vh auto 2vh;
+    border: 1px solid black;
+    border-radius: 1rem;
+}
+
+/*login-container*/
+.login-container{
+    background-color: #F8F0E5;
+    max-width: 50vw;
+    max-height: 42vh;
+    padding: 2rem;
+    margin: 18vh auto 2vh;
+    border: 1px solid black;
+    border-radius: 1rem;
+}
+
+/*myprofile-container*/
+.myprofile-container{
+    background-color: #F8F0E5;
+    max-width: 50vw;
+    max-height: 68vh;
+    padding: 2rem;
+    margin: 10vh auto 2vh;
+    border: 1px solid black;
+    border-radius: 1rem;
+}
+
+/*signup-container*/
+.signup-container{
+    background-color: #F8F0E5;
+    max-width: 50vw;
+    max-height: 68vh;
+    padding: 2rem;
+    margin: 10vh auto 2vh;
+    border: 1px solid black;
+    border-radius: 1rem;
 }

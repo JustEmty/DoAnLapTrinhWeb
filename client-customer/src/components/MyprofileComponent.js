@@ -21,37 +21,30 @@ class Myprofile extends Component {
     render(){
         if(this.context.token === '') return (<Navigate replace to ='/login' />) ;
         return(
-            <div className="align-center">
-                <h2 className="text-center">MY PROFILE</h2>
-                <form>
-                    <table className="align-center">
-                        <tbody>
-                            <tr>
-                                <td>Username</td>
-                                <td><input type="text" value={ this.state.txtUsername } onChange={(e) => { this.setState({ txtUsername: e.target.value }) }} /></td>
-                            </tr>
-                            <tr>
-                                <td>Password</td>
-                                <td><input type="password" value={ this.state.txtPassword } onChange={(e) => { this.setState({ txtPassword: e.target.value }) }} /></td>
-                            </tr>
-                            <tr>
-                                <td>Name</td>
-                                <td><input type="text" value={ this.state.txtName } onChange={(e) => { this.setState({ txtName: e.target.value }) }} /></td>
-                            </tr>
-                            <tr>
-                                <td>Phone</td>
-                                <td><input type="tel" value={ this.state.txtPhone } onChange={(e) => { this.setState({ txtPhone: e.target.value }) }} /></td>
-                            </tr>
-                            <tr>
-                                <td>Email</td>
-                                <td><input type="email" value={ this.state.txtEmail } onChange={(e) => { this.setState({ txtEmail: e.target.value }) }} /></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td><input type="submit" value="UPDATE" onClick={(e) => this.btnUpdateClick(e) } /></td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <div className='myprofile-container'>
+                <form className='form-myprofile'>
+                    <h1 class="h3 mb-3 fw-normal text-center">Tài khoản của tôi</h1>
+                    <div class="form-floating mt-2">
+                        <input type="text" class="form-control" id="floatingUsername" placeholder="Tên đăng nhập" value={ this.state.txtUsername } onChange={(e) => { this.setState({ txtUsername: e.target.value }) }} />
+                        <label for="floatingUsername">Tên đăng nhập</label>
+                    </div>
+                    <div class="form-floating mt-2">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Mật khẩu" value={ this.state.txtPassword } onChange={(e) => { this.setState({ txtPassword: e.target.value }) }} />
+                        <label for="floatingPassword">Mật khẩu</label>
+                    </div>
+                    <div class="form-floating mt-2">
+                        <input type="text" class="form-control" id="floatingName" placeholder="Họ và tên" value={ this.state.txtName } onChange={(e) => { this.setState({ txtName: e.target.value }) }} />
+                        <label for="floatingName">Họ và tên</label>
+                    </div>
+                    <div class="form-floating mt-2">
+                        <input type="text" class="form-control" id="floatingPhone" placeholder="Số điện thoại" value={ this.state.txtPhone } onChange={(e) => { this.setState({ txtPhone: e.target.value }) }} />
+                        <label for="floatingPhone">Số điện thoại</label>
+                    </div>
+                    <div class="form-floating mt-2">
+                        <input type="text" class="form-control" id="floatingEmail" placeholder="Email" value={ this.state.txtEmail } onChange={(e) => { this.setState({ txtEmail: e.target.value }) }} />
+                        <label for="floatingEmail">Email</label>
+                    </div>
+                    <button class="w-100 btn btn-lg btn-warning mt-4" type="submit" onClick={(e) => this.btnActiveClick(e) }>Cập nhật</button>
                 </form>
             </div>
         );
