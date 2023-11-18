@@ -144,3 +144,35 @@ h5{
     border: 1px solid black;
     border-radius: 1rem;
 }
+
+/* datatable.css */
+.datatable {
+  text-align: center;
+  border-collapse: collapse;
+}
+
+.datatable th, .datatable td {
+  border: 1px solid #000; /* Thêm đường kẻ cho mỗi ô */
+  padding: 8px; /* Thêm padding cho các ô để tạo khoảng cách */
+}
+
+/* header */
+tr:first-child.datatable{
+  background-color: #ffcc00;
+}
+
+/* even rows, except header */
+tr:not(:first-child):nth-child(even).datatable{
+  background-color: #f5f5f5;
+}
+
+/* odd rows, except header */
+tr:not(:first-child):nth-child(odd).datatable{
+  background-color: #ffeeaa;
+}
+
+/* except header */
+tr:not(:first-child):hover.datatable{
+  background-color: #dcfcfc;
+  cursor: pointer;
+}
