@@ -20,16 +20,16 @@ class Mycart extends Component {
                     <td>{ item.product.price }</td>
                     <td>{ item.quantity }</td>
                     <td>{ item.product.price * item.quantity }</td>
-                    <td><span className="link" onClick={() => this.lnkRemoveClick(item.product._id)}>Remove</span></td>
-                </tr>
+                    <td><button type="button" className="btn btn-warning" onClick={() => this.lnkRemoveClick(item.product._id)}>Remove</button></td>
+                </tr> 
             );
         });
         return(
             <div className="align-center">
                 <h2 className="text-center">ITEM LIST</h2>
-                <table className="datatable" border ="1">
+                <table className="table table-bordered" border ="1">
                     <tbody>
-                        <tr className="datatable">
+                        <tr className="table-dark">
                             <th>No.</th>
                             <th>ID</th>
                             <th>Name</th>
@@ -45,7 +45,7 @@ class Mycart extends Component {
                             <td colSpan="6" ></td>
                             <td>Total</td>
                             <td>{ CartUtil.getTotal(this.context.mycart) }</td>
-                            <td><span className="link" onClick={() => this.lnkCheckoutClick()}>CHECKOUT</span></td>
+                            <td><button type="button" className="btn btn-dark" onClick={() => this.lnkCheckoutClick()}>CHECKOUT</button></td>
                         </tr>
                     </tbody>
                 </table>
