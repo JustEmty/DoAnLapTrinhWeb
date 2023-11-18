@@ -92,7 +92,7 @@ class Myorders extends Component {
             const cid = this.context.customer._id;
             this.apiGetOrdersByCustID(cid);
         }
-    }
+    } 
     
     // event - handlers
     trItemClick(item){
