@@ -6,6 +6,7 @@ const MyConstants = {
     EMAIL_USER: 'thanhhau1912003@gmail.com', // Microsoft mail service
     EMAIL_PASS: 'whwhergbpmzgajxi',
     JWT_SECRET: 'admin',
-    JWT_EXPIRES: '1000000000000000000000', // in milliseconds10 
+    JWT_EXPIRES: '100000000000000000000', // in milliseconds10 
 };
-module.exports = MyConstants;
+
+module.exports = MyConstants; 
