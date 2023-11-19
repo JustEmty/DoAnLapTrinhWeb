@@ -19,14 +19,14 @@ class Menu extends Component {
     render(){
         const cates = this.state.categories.map((item) => {
             return(
-                <li key={ item._id }><Link to={'/product/category/' + item._id} class="nav-link active" >{ item.name }</Link></li>
+                <li key={ item._id }><Link to={'/product/category/' + item._id} class="nav-link active">{ item.name }</Link></li>
             );
         });
 
         return (
-            <nav class="navbar sticky-top navbar navbar-expand-lg bg-warning nav-menu">
+            <nav class="navbar sticky-top navbar-expand-lg bg-warning nav-menu">
                 <div class="container-fluid">
-                    <Link to='/' class="navbar-brand" >BookStore</Link>
+                    <Link to='/' class="navbar-brand">BookStore</Link>
                     <button class="navbar-toggler bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -35,7 +35,7 @@ class Menu extends Component {
                             <li class="nav-item">
                                 <Link to='/' class="nav-link active" aria-current="page">Trang chủ</Link>
                             </li>
-                            <li class="nav-item dropdown ">
+                            <li class="nav-item dropdown">
                                 <a class="nav-link active dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Thể loại
                                 </a>
@@ -51,8 +51,9 @@ class Menu extends Component {
                             </li>
                         </ul>
                         <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Tìm kiếm" aria-label="Search"/>
-                            <button class="btn btn-outline-success" type="submit">Tìm kiếm</button>
+                            <input class="form-control me-2" type="search" placeholder="Tìm kiếm" aria-label="Search" value ={this.state.
+                                txtKeyword} onChange={(e) => { this.setState({ txtKeyword: e.target.value }) }} />
+                            <button class="btn btn-outline-success" type="submit" value ="SEARCH" onClick={(e) => this.btnSearchClick(e) } >Tìm kiếm</button>
                         </form>
                     </div>
                 </div>
