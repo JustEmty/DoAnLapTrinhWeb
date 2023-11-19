@@ -19,7 +19,7 @@ class Menu extends Component {
     render(){
         const cates = this.state.categories.map((item) => {
             return(
-                <li key={ item._id }><Link to={'/product/category/' + item._id} class="nav-link active">{ item.name }</Link></li>
+                <li key={ item._id }><Link to={'/product/category/' + item._id} class="nav-link active item-dropdown">{ item.name }</Link></li>
             );
         });
 
@@ -51,7 +51,7 @@ class Menu extends Component {
                             </li>
                         </ul>
                         <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Tìm kiếm" aria-label="Search" value ={this.state.
+                            <input class="form-control me-2 form-search" type="search" placeholder="Tìm kiếm" aria-label="Search" value ={this.state.
                                 txtKeyword} onChange={(e) => { this.setState({ txtKeyword: e.target.value }) }} />
                             <button class="btn btn-outline-success" type="submit" value ="SEARCH" onClick={(e) => this.btnSearchClick(e) } >Tìm kiếm</button>
                         </form>
