@@ -1,0 +1,94 @@
+/* Add these styles to your stylesheet or style section */
+.d-md-flex {
+  display: flex;
+}
+
+.flex-md-equal {
+  flex: 1;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.my-md-3 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.ps-md-3 {
+  padding-left: 1rem;
+}
+
+.bg-dark {
+  background-color: #343a40 !important;
+}
+
+.me-md-3 {
+  margin-right: 1rem;
+}
+
+.pt-3 {
+  padding-top: 0.75rem !important;
+}
+
+.px-3 {
+  padding-left: 0.75rem !important;
+  padding-right: 0.75rem !important;
+}
+
+.pt-md-5 {
+  padding-top: 3.75rem !important;
+}
+
+.px-md-5 {
+  padding-left: 3.75rem !important;
+  padding-right: 3.75rem !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-white {
+  color: #fff !important;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.my-3 {
+  margin-top: 0.75rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.py-3 {
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
+}
+
+.g-3 {
+  gap: 1.5rem; /* Adjust gap as needed */
+}
+
+/* Center the content vertically and horizontally */
+.d-md-flex .flex-md-equal .bg-dark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+/* Optional: Adjust spacing between rows */
+.row.g-3 > [class^="col-"] {
+  margin-bottom: 1rem; /* Adjust margin as needed */
+}
+.bg-dark{
+    width: 85%;
+    margin-left: 7.5%;
+}
+.text-left{
+    margin-left: 7.5%;
+}
