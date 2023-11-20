@@ -23,11 +23,25 @@
     width: 50%;
     margin: auto;
 }
+@media screen and (max-width: 1300px) {
+    .nav-client-customer{
+        width: 100%;
+    }
+}
 
 .nav-item{
     margin: 20px;
     color: black;
     font-weight: 600;
+}
+.dropdown-menu{
+    width: 40%;
+}
+
+@media screen and (max-width: 1300px) {
+    .item-dropdown{
+        margin-left: 10px;
+    }
 }
 
 .btn-outline-success{
@@ -36,6 +50,11 @@
 
 .d-flex{
     width: 30%;
+}
+@media screen and (max-width: 1300px) {
+    .d-flex{
+        width: 90%;
+    }
 }
 
 /*InformComponent*/
