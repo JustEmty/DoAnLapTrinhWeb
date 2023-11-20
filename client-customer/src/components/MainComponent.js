@@ -48,9 +48,9 @@ class Main extends Component {
                                     <h5>Tài khoản</h5>
                                     <ul class="nav flex-column">
                                         <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Tài khoản của tôi</a></li>
-                                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Đăng ký</a></li>
-                                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Đăng nhập</a></li>
-                                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Giỏ hàng</a></li>
+                                        <li class="nav-item mb-2"><a href="/signup" class="nav-link p-0 text-body-secondary">Đăng ký</a></li>
+                                        <li class="nav-item mb-2"><a href="/login" class="nav-link p-0 text-body-secondary">Đăng nhập</a></li>
+                                        <li class="nav-item mb-2"><a href="/mycart" class="nav-link p-0 text-body-secondary">Giỏ hàng</a></li>
                                     </ul>
                                 </div>
 
