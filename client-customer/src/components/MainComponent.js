@@ -31,45 +31,45 @@ class Main extends Component {
                     <Route path='/mycart' element={<Mycart />} />
                     <Route path='/myorders' element={<Myorders />} />
                 </Routes>  
-                <div class="container-fluid bg-warning contain-first">
+                <div class="container-fluid contain-first">
                     <div class="container contain-second">
                         <footer class="py-5 footer-first">
                             <div class="row">
                                 <div class="col-6 col-md-2 mb-3">
-                                    <h5>Hổ trợ</h5>
+                                    <h5 className='text-white'>Hổ trợ</h5>
                                     <ul class="nav flex-column column-1">
-                                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Địa chỉ: 685 Market Street, Las Vegas, LA 95820, United States.</a></li>
-                                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">example@domain.com</a></li>
-                                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Điện thoại: 0967284</a></li>
+                                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Địa chỉ: 685 Market Street, Las Vegas, LA 95820, United States.</a></li>
+                                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">example@domain.com</a></li>
+                                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Điện thoại: 0967284</a></li>
                                     </ul>
                                 </div>
 
                                 <div class="col-6 col-md-2 mb-3">
-                                    <h5>Tài khoản</h5>
+                                    <h5 className='text-white'>Tài khoản</h5>
                                     <ul class="nav flex-column">
-                                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Tài khoản của tôi</a></li>
-                                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Đăng ký</a></li>
-                                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Đăng nhập</a></li>
-                                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Giỏ hàng</a></li>
+                                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Tài khoản của tôi</a></li>
+                                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Đăng ký</a></li>
+                                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Đăng nhập</a></li>
+                                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Giỏ hàng</a></li>
                                     </ul>
                                 </div>
 
                                 <div class="col-6 col-md-2 mb-3">
-                                    <h5>Liên kết</h5>
+                                    <h5 className='text-white'>Liên kết</h5>
                                     <ul class="nav flex-column">
-                                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Chính sách bảo mật</a></li>
-                                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Điều khoản sử dụng</a></li>
-                                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQ</a></li>
-                                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Liên hệ</a></li>
+                                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Chính sách bảo mật</a></li>
+                                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Điều khoản sử dụng</a></li>
+                                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">FAQ</a></li>
+                                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Liên hệ</a></li>
                                     </ul>
                                 </div>
 
                                 <div class="col-md-5 offset-md-1 mb-3">
                                     <form>
-                                        <h6>Theo dõi bản tin của chúng tôi</h6>
-                                        <p>Thông báo hàng tháng về những gì mới và thú vị từ chúng tôi.</p>
+                                        <h6 className='text-white'>Theo dõi bản tin của chúng tôi</h6>
+                                        <p className='text-white'>Thông báo hàng tháng về những gì mới và thú vị từ chúng tôi.</p>
                                         <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-                                            <label for="newsletter1" class="visually-hidden">Email address</label>
+                                            <label for="newsletter1" class="visually-hidden text-white">Email address</label>
                                             <input id="newsletter1" type="text" class="form-control" placeholder="Email"/>
                                             <button class="btn btn-primary" type="button">Subscribe</button>
                                         </div>
