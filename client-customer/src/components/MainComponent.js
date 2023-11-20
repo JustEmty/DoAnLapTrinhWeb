@@ -47,10 +47,10 @@ class Main extends Component {
                                 <div class="col-6 col-md-2 mb-3">
                                     <h5 className='text-white'>Tài khoản</h5>
                                     <ul class="nav flex-column">
-                                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Tài khoản của tôi</a></li>
-                                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Đăng ký</a></li>
-                                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Đăng nhập</a></li>
-                                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Giỏ hàng</a></li>
+                                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Tài khoản của tôi</a></li>
+                                        <li class="nav-item mb-2"><a href="/signup" class="nav-link p-0 text-body-secondary">Đăng ký</a></li>
+                                        <li class="nav-item mb-2"><a href="/login" class="nav-link p-0 text-body-secondary">Đăng nhập</a></li>
+                                        <li class="nav-item mb-2"><a href="/mycart" class="nav-link p-0 text-body-secondary">Giỏ hàng</a></li>
                                     </ul>
                                 </div>
 

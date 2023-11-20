@@ -21,14 +21,30 @@ class Product extends Component {
                         <figcaption className="text-center">{ item.name }<br/>Price: { item.price }</figcaption>
                     </figure>
                 </div>
-            );
-        });
-        return (
-            <div className="text-center">
-                <h2 className="text-center">LIST PRODUCTS</h2>
-                { prods }
+                <div className="product-details">
+                  <span className="font-weight-bold d-block">Price: {item.price}</span>
+                  <span>{item.name}</span>
+                </div>
+                    <Link to={'/product/' + item._id}>
+                        <button type="button" class="btn btn-dark">View Products</button>
+                    </Link>
+              </div>
             </div>
-        );
+          ));
+          
+          return (
+            <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+              <div class="my-3 py-3">
+                <div className="text-center">
+                <h2 className="text-center">LIST PRODUCTS</h2>
+                  <div className="row justify-content-center g-3">
+                  {prods}
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+              
     }
 
     componentDidMount(){ // first : / product /...
