@@ -1,8 +1,9 @@
 import axios from 'axios';
 import React, { Component } from 'react';
 import MyContext from '../contexts/MyContext';
+import logo from '../assets/Logo.jpg';
 
-class Login extends Component{
+class  Login extends Component{
     static contextType = MyContext; // using this.context to access global state
     
     constructor(props){
@@ -18,16 +19,19 @@ class Login extends Component{
             return(
                 <div className='login-container'>
                     <form className='form-signin'>
+                        <div className='logo-container'>
+                            <img className='logo' src={logo} alt='logo' />
+                        </div>
                         <h1 class="h3 mb-3 fw-normal text-center">Admin Login</h1>
                         <div class="form-floating mt-2">
-                        <input type="text" class="form-control" id="floatingUsername" placeholder="username" value={ this.state.txtUsername } onChange={(e) => { this.setState({ txtUsername: e.target.value}) }} />
-                        <label for="floatingUsername">Username</label>
+                            <input type="text" class="form-control" id="floatingUsername" placeholder="username" value={ this.state.txtUsername } onChange={(e) => { this.setState({ txtUsername: e.target.value}) }} />
+                            <label for="floatingUsername">Username</label>
                         </div>
                         <div class="form-floating mt-2">
                             <input type="password" class="form-control" id="floatingPassword" placeholder="Password" value={ this.state.txtPassword } onChange={(e) => { this.setState({ txtPassword: e.target.value }) }} />
                             <label for="floatingPassword">Password</label>
                         </div>
-                        <button class="w-100 btn btn-lg btn-primary mt-4" type="submit" onClick={(e) => this.btnLoginClick(e)}>Sign in</button>
+                        <button class="w-100 btn btn-lg btn-primary mt-4 signin-button" type="submit" onClick={(e) => this.btnLoginClick(e)}>Sign in</button>
                     </form>
                 </div>
             );
