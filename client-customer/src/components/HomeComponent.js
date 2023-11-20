@@ -57,39 +57,40 @@ class Home extends Component {
             );
         });
         return(
-            <div>
-            <h2 className="text-left">LIST PRODUCTS</h2>
-            <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
-              <div class="my-3 py-3">
-                <div className="text-center">
-                  <div className="row justify-content-center g-3">
-                    {newprods}
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <br></br>
-            <h2 className="text-left">LIST PRODUCTS</h2>
-                {this.state.hotprods.length> 0 ?              
-                    <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
-                        <div class="my-3 py-3">
-                            <div className="text-center">                                
-                                <div className="row justify-content-center g-1">
-                                    {hotprods}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+<div>
+  <h2 className="text-left">LIST PRODUCTS</h2>
+  <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+    <div class="my-3 py-3">
+      <div className="text-center">
+        <div className="row justify-content-center g-3">
+          {newprods}
+        </div>
+      </div>
+    </div>
+  </div>
 
-                    <main class="container-fluid ">
-                        <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis justify-content-evenly contain-main">
-                            {hotprods}
-                        </div>
-                    </main>
-                </div>
-                : <div />}
-            </div>  
+  <br />
+
+  {this.state.hotprods.length > 0 ? (
+    <>
+      <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+        <div class="my-3 py-3">
+          <div className="text-center">
+            <div className="row justify-content-center g-1">{hotprods}</div>
+          </div>
+        </div>
+      </div>
+
+      <main class="container-fluid">
+        <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis justify-content-evenly contain-main">
+          {hotprods}
+        </div>
+      </main>
+    </>
+  ) : (
+    <div />
+  )}
+</div>
         );
     }
 
