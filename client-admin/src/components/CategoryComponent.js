@@ -19,33 +19,30 @@ class Category extends Component {
         const cates = this.state.categories.map((item) => {
             return (
                 <tr key ={ item._id } className="datatable" onClick={() => this.trItemClick(item)}>
-                    <td>{ item._id }</td>
+                    <td scope="row">{ item._id }</td>
                     <td>{ item.name }</td>
                 </tr>
-                // <ul class="list-group list-group-horizontal" key ={ item._id } className="datatable" onClick={() => this.trItemClick(item)}>
-                //     <li class="list-group-item">{ item._id }</li>
-                //     <li class="list-group-item">{ item.name }</li>
-                //     <li class="list-group-item">A third item</li>
-                // </ul>
             );
         });
         return (
-            <div>
-                <div className="float-left">
-                    <h2 className="text-center">CATEGORY LIST</h2>
-                    <table className="datatable" border="1">
-                        <tbody>
-                            <tr className="datatable">
-                                <th>ID</th>
-                                <th>Name</th>
+            <div class="row table-container">
+                <h2 className="text-center">CATEGORY LIST</h2>
+                <div class="col-8 col-sm-8 col-md-8 tabledata">
+                    <table class="table table-hover col-7">
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Name</th>
                             </tr>
+                        </thead>
+                        <tbody>
                             { cates }
                         </tbody>
                     </table>
                 </div>
-                <div className="inline" />
-                <CategoryDetail item={ this.state.itemSelected } updateCategories={ this.updateCategories } />
-                <div className="float-clear" />
+                <div class="col-6 col-md-4 tabledata-detail">
+                    <CategoryDetail item={ this.state.itemSelected } updateCategories={ this.updateCategories } />
+                </div>
             </div>
         );    
     }

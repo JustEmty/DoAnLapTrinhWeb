@@ -169,6 +169,7 @@
 
 .link-footer-text{
     color: var(--font-color-white-50percent);
+    font-family: var(--font-family-paragraph);
 }
 
 .link-footer-text:hover{
@@ -179,36 +180,52 @@
     width: 50px;
 }
 
-
-
-/* datatable.css */
-.datatable {
-  text-align: center;
-  border-collapse: collapse;
+/* CategoryComponent */
+.table-container{
+    background-color: var(--secondary-color);
+    height: fit-content;   
+    padding: 1em;
 }
 
-.datatable th, .datatable td {
-  border: 1px solid #000; /* Thêm đường kẻ cho mỗi ô */
-  padding: 8px; /* Thêm padding cho các ô để tạo khoảng cách */
+.table-container h2{
+    font-family: var(--font-family-header);
+    color: var(--primary-color);
+    padding-top: 1em;
 }
 
-/* header */
-tr:first-child.datatable{
-  background-color: #ffcc00;
+.tabledata{
+    margin-top: 4em;
 }
 
-/* even rows, except header */
-tr:not(:first-child):nth-child(even).datatable{
-  background-color: #f5f5f5;
+.tabledata th{
+    font-family: var(--font-family-header);
+    color: var(--primary-color);
 }
 
-/* odd rows, except header */
-tr:not(:first-child):nth-child(odd).datatable{
-  background-color: #ffeeaa;
+.tabledata td{
+    font-family: var(--font-family-paragraph);
+    color: var(--font-color-black);
 }
 
-/* except header */
-tr:not(:first-child):hover.datatable{
-  background-color: #dcfcfc;
-  cursor: pointer;
+.tabledata-detail{
+    margin-top: 2em;
+    padding-left: .5em;
+}
+
+.form-container{
+    background-color: var(--font-color-white);
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.table-button{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    font-family: var(--font-family-paragraph);
+}
+
+.table-button:hover{
+    background-color: var(--primary-color);
+    color: var(--font-color-white);
 }

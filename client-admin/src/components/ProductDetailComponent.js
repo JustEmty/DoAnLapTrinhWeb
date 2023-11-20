@@ -27,44 +27,88 @@ class ProductDetail extends Component{
             }
         });
         return (
-            <div className="float-right">
+            // <div className="float-right">
+            //     <h2 className="text-center">PRODUCT DETAIL</h2>
+            //     <form>
+            //         <table>
+            //             <tbody>
+            //                 <tr>
+            //                     <td>ID</td>
+            //                     <td><input type="text" value={ this.state.txtID } onChange={(e) => { this.setState({ txtID: e.target.value }) }} readOnly={ true } /></td>
+            //                 </tr>
+            //                 <tr>
+            //                     <td>Name</td>
+            //                     <td><input type="text" value={ this.state.txtName } onChange={(e) => { this.setState({ txtName: e.target.value }) }} /></td>
+            //                 </tr>
+            //                 <tr>
+            //                     <td>Price</td>
+            //                     <td><input type="text" value={ this.state.txtPrice } onChange={(e) => { this.setState({ txtPrice: e.target.value }) }} /></td>
+            //                 </tr>
+            //                 <tr>
+            //                     <td>Image</td>
+            //                     <td><input type="file" name="fileImage" accept="image/jpeg,image/png,image/gif" onChange={(e) => this.previewImage(e) } /></td>
+            //                 </tr>
+            //                 <tr >
+            //                     <td>Category</td>
+            //                     <td><select onChange={(e) => { this.setState({ cmbCategory: e.target.value }) }} >{ cates }</select></td>
+            //                 </tr>
+            //                 <tr>
+            //                     <td></td>
+            //                     <td>
+            //                         <input type="submit" value="ADD NEW" onClick={(e) => this.btnAddClick(e) } />
+            //                         <input type="submit" value="UPDATE" onClick={(e) => this.btnUpdateClick(e)} />
+            //                         <input type="submit" value="DELETE" onClick={(e) => this.btnDeleteClick(e)} />
+            //                     </td>
+            //                 </tr>
+            //                 <tr>
+            //                     <td colSpan="2"><img src={ this.state.imgProduct } width="300px" height="300px" alt="" /></td>
+            //                 </tr>
+            //             </tbody>
+            //         </table>
+            //     </form>
+            // </div>
+            <div className ="float-right">
                 <h2 className="text-center">PRODUCT DETAIL</h2>
-                <form>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>ID</td>
-                                <td><input type="text" value={ this.state.txtID } onChange={(e) => { this.setState({ txtID: e.target.value }) }} readOnly={ true } /></td>
-                            </tr>
-                            <tr>
-                                <td>Name</td>
-                                <td><input type="text" value={ this.state.txtName } onChange={(e) => { this.setState({ txtName: e.target.value }) }} /></td>
-                            </tr>
-                            <tr>
-                                <td>Price</td>
-                                <td><input type="text" value={ this.state.txtPrice } onChange={(e) => { this.setState({ txtPrice: e.target.value }) }} /></td>
-                            </tr>
-                            <tr>
-                                <td>Image</td>
-                                <td><input type="file" name="fileImage" accept="image/jpeg,image/png,image/gif" onChange={(e) => this.previewImage(e) } /></td>
-                            </tr>
-                            <tr >
-                                <td>Category</td>
-                                <td><select onChange={(e) => { this.setState({ cmbCategory: e.target.value }) }} >{ cates }</select></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>
-                                    <input type="submit" value="ADD NEW" onClick={(e) => this.btnAddClick(e) } />
-                                    <input type="submit" value="UPDATE" onClick={(e) => this.btnUpdateClick(e)} />
-                                    <input type="submit" value="DELETE" onClick={(e) => this.btnDeleteClick(e)} />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colSpan="2"><img src={ this.state.imgProduct } width="300px" height="300px" alt="" /></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <form className='form-container'>
+                    <div class="mb-3 row">
+                        <label for="staticID" class="col-sm-2 col-form-label">ID</label>
+                        <div class="col-sm-10">
+                            <input type="text" readonly class="form-control-plaintext" id="staticID" value={ this.state.txtID } onChange={(e) => { this.setState({ txtID: e.target.value }) }}/>
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="inputName" class="col-sm-2 col-form-label">Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputName" value={ this.state.txtName } onChange={(e) => { this.setState({ txtName: e.target.value }) }} />
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="inputName" class="col-sm-2 col-form-label">Price</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputName" value={ this.state.txtPrice } onChange={(e) => { this.setState({ txtName: e.target.value }) }} />
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="inputName" class="col-sm-2 col-form-label">Image</label>
+                        <div class="col-sm-10">
+                            <input type="file" name="fileImage" accept="image/jpeg,image/png,image/gif" onChange={(e) => this.previewImage(e) } />
+                        </div>
+                    </div>
+                    <select class="form-select" aria-label="Default select example" onChange={(e) => { this.setState({ cmbCategory: e.target.value }) }}>
+                        <option selected>Category</option>
+                        { cates }
+                    </select>
+                    <div class="mb-3 row mt-3">
+                        <label for="inputName" class="col-sm-2 col-form-label">Preview</label>
+                        <div class="col-sm-10">
+                            <img src={ this.state.imgProduct } width="300px" height="300px" alt="" />
+                        </div>
+                    </div>
+                    <div className='d-flex justify-content-center'>
+                        <button type="submit" class="btn btn-primary m-2 table-button" onClick={(e) => this.btnAddClick(e)}>ADD NEW</button>
+                        <button type="submit" class="btn btn-primary m-2 table-button" onClick={(e) => this.btnUpdateClick(e)}>UPDATE</button>
+                        <button type="submit" class="btn btn-primary m-2 table-button" onClick={(e) => this.btnDeleteClick(e)}>DELETE</button>
+                    </div>
                 </form>
             </div>
         ) ;
