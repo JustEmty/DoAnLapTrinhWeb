@@ -1,10 +1,12 @@
 /*MenuComponent*/
 .nav-menu{
-    width: 85%;
+    width: 86.5%;
     border-radius: 0.8em;
     margin: 10px auto 0;
     height: 4.5em;
     margin-bottom: 5vh;
+    background-color: white;
+    box-shadow: 1px 2px 4px black;
 }
 @media screen and (max-width: 1300px) {
     .nav-menu{
@@ -20,7 +22,7 @@
 }
 
 .nav-client-customer{
-    width: 50%;
+    width: 60%;
     margin: auto;
 }
 @media screen and (max-width: 1300px) {
@@ -48,13 +50,21 @@
     width: 130px;
 }
 
-.d-flex{
+.container-search{
     width: 30%;
 }
 @media screen and (max-width: 1300px) {
-    .d-flex{
+    .container-search{
         width: 90%;
     }
+}
+
+.btn-search{
+    background-color: #BFC6FF;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    width: 20vh;
 }
 
 /*InformComponent*/
@@ -98,13 +108,67 @@ div.inline{
     margin: 0px auto;
 }
 
-.item-picture{
-    margin-left: 50px;
+.text-name-new{
+    color: black;
+    margin-left: 130px;
+}
+
+.text-name-hot{
+    color: white;
+    margin-left: 130px;
+}
+
+.item-picture-new{
+    margin-left: 130px;
+}
+
+.item-picture-hot{
+    margin-left: 130px;
+}
+.row-main{
+    width: 100%;
+}
+
+.column-first{
+    width: 50%;
+}
+
+.heading-1{
+    font-size: 55px;
+    font-style: oblique;
+    color: white;
+}
+
+.obama{
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+
+.contain-main{
+    background-color: #0F1866;
+}
+
+.contain-main-new{
+    background-color: #BFC6FF;
+}
+.discover-button{
+    background-color: #BFC6FF;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.container-first{
+    background-color: #BFC6FF;
 }
 
 /*MainComponent*/
 .contain-first{
     margin-top: 10vh;
+    background-color: #121533;
 }
 @media screen and (max-width: 1400px) {
     .contain-first{

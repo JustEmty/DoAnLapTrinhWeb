@@ -81,6 +81,13 @@ class Home extends Component {
                             </div>
                         </div>
                     </div>
+
+                    <main class="container-fluid ">
+                        <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis justify-content-evenly contain-main">
+                            {hotprods}
+                        </div>
+                    </main>
+                </div>
                 : <div />}
             </div>  
         );
