@@ -92,3 +92,35 @@
 .text-left{
     margin-left: 7.5%;
 }
+/*  */
+.sub-intro {
+  color: white;
+  font-size: 30px;
+  width: 40%;
+  line-height: 60px;
+  margin-right: 200px;
+}
+.name-sub{
+  font-size: 20px;
+  margin-top: -16px;
+}
+.header {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-header{
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+  height: 50px;
+  
+}
+.btn-header button{
+  background-color: #83A2FF;
+  border-radius: 20px;
+}
+.btn-header button:hover{
+  background-color: #000;
+  color: #83A2FF;
+}
