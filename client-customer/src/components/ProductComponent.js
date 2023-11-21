@@ -38,7 +38,7 @@ class Product extends Component {
             <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
               <div class="my-3 py-3">
                 <div className="text-center">
-                <h2 className="text-center">LIST PRODUCTS</h2>
+                <h2 className="text-center text-mt">LIST PRODUCTS</h2>
                   <div className="row justify-content-center g-3">
                   {prods}
                   </div>
