@@ -92,7 +92,7 @@
 .text-left{
     margin-left: 7.5%;
 }
-/*  */
+/*Css Header Home*/
 .sub-intro {
   color: white;
   font-size: 30px;
@@ -123,4 +123,14 @@
 .btn-header button:hover{
   background-color: #000;
   color: #83A2FF;
+}
+
+/*  */
+.text-mt {
+  margin-top: -16px;
+  margin-bottom: 42px;
+}
+
+.text-mb {
+  margin-top: 16px;
 }

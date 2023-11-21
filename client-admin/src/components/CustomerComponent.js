@@ -27,7 +27,7 @@ class Customer extends Component {
                     <td>{ item.email }</td>
                     <td>{ item.active }</td>
                     <td>
-                        { item . active === 0 ?
+                        { item.active === 0 ?
                             <span className="link" onClick={() => this.lnkEmailClick(item)}>EMAIL</span>
                             :
                             <span className="link" onClick={() => this.lnkDeactiveClick(item)}>DEACTIVE</span>}
@@ -63,60 +63,68 @@ class Customer extends Component {
             });
         }
         return (
-            <div>
+            <div class ="table-container">
                 <div className="align-center">
                     <h2 className="text-center">CUSTOMER LIST</h2>
-                    <table className="datatable" border="1">
-                        <tbody>
-                            <tr className="datatable">
-                                <th>ID</th>
-                                <th>Username</th>
-                                <th>Password</th>
-                                <th>Name</th>
-                                <th>Phone</th>
-                                <th>Email</th>
-                                <th>Active</th>
-                                <th>Action</th>
-                            </tr>
-                            { customers }
-                        </tbody>
-                    </table>
+                    <div className = "col-8 col-sm-8 col-md-8 tabledata datatable-order">
+                        <table className="table table-hover col-7">
+                            <tbody>
+                                <tr className="datatable">
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Username</th>
+                                    <th scope="col">Password</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Phone</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Active</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                                { customers }
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
                 { this.state.orders.length > 0 ?
                     <div className="align-center">
                         <h2 className="text-center">ORDER LIST</h2>
-                        <table className="datatable" border="1">
+                        <div className = "col-8 col-sm-8 col-md-8 tabledata datatable-order">
+                        <table className="table table-hover col-7">
                             <tbody>
-                                <tr className =" datatable ">
-                                    <th>ID</th>
-                                    <th>Creation date</th>
-                                    <th>Cust.name</th>
-                                    <th>Cust.phone</th>
-                                    <th>Total</th>
-                                    <th>Status</th>
+                                <tr className ="datatable">
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Creation date</th>
+                                    <th scope="col">Cust.name</th>
+                                    <th scope="col">Cust.phone</th>
+                                    <th scope="col">Total</th>
+                                    <th scope="col">Status</th>
                                 </tr>
                                 { orders }
                             </tbody>
                         </table>
+
+                      </div>
                     </div>
                 : <div />}
                 { this.state.order ?
                     <div className="align-center">
                         <h2 className="text-center">ORDER DETAIL</h2>
-                        <table className="datatable" border="1">
-                            <tbody>
-                                <tr className="datatable">
-                                    <th>No.</th>
-                                    <th>Prod.ID</th>
-                                    <th>Prod.name</th>
-                                    <th>Image</th>
-                                    <th>Price</th>
-                                    <th>Quantity</th>
-                                    <th>Amount</th>
-                                </tr>
-                            { items }
-                            </tbody>
-                        </table>
+                        <div>
+                            <table className="table table-hover col-7">
+                                <tbody>
+                                    <tr className="datatable">
+                                        <th scope="col">No.</th>
+                                        <th scope="col">Prod.ID</th>
+                                        <th scope="col">Prod.name</th>
+                                        <th scope="col">Image</th>
+                                        <th scope="col">Price</th>
+                                        <th scope="col">Quantity</th>
+                                        <th scope="col">Amount</th>
+                                    </tr>
+                                { items }
+                                </tbody>
+                            </table>
+
+                        </div>
                     </div>
                 : <div />}
             </div>

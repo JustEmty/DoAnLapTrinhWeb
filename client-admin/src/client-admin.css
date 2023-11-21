@@ -229,3 +229,8 @@
     background-color: var(--primary-color);
     color: var(--font-color-white);
 }
+
+/*  */
+.datatable-order {
+    margin: auto;
+}
