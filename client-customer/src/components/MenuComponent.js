@@ -77,5 +77,4 @@ class Menu extends Component {
         });
     }
 }
-
 export default withRouter(Menu);
