@@ -134,6 +134,7 @@
     width: 90%;
     margin: 10px auto;
     justify-content: end;
+    font-family: var(--font-family-header);
 }
 
 .flex-container{
@@ -283,13 +284,34 @@ h5{
 
 /*ActiveComponent*/
 .active-container{
-    background-color: #F8F0E5;
-    max-width: 50vw;
-    max-height: 45vh;
+    background-color: var(--secondary-color);
+    width: 80vw;
+    height: fit-content;
     padding: 2rem;
-    margin: 18vh auto 2vh;
-    border: 1px solid black;
+    margin: 18vh auto 0;
+    border: 1px solid var(--primary-color);
     border-radius: 1rem;
+}
+
+@media screen and (min-width: 1200px) {
+    .active-container{
+        width: 50vw;
+    }
+}
+
+.active-container h1{
+    font-family: var(--font-family-header);
+    color: var(--font-color-black);
+    font-size: 30px;
+
+}
+
+.active-container div input, label{
+    font-family: var(--font-family-paragraph);
+}
+
+.active-container div label{
+    font-size: 18px;
 }
 
 /*login-container*/
@@ -312,7 +334,7 @@ h5{
 .login-container h1{
     font-family: var(--font-family-header);
     color: var(--font-color-black);
-    font-size: 42px;
+    font-size: 35px;
 
 }
 
@@ -402,9 +424,13 @@ h5{
 .navbar-nav-scroll .dropdown-menu.show {
     background-color: #007BFF !important;
 }
-
+.navbar-nav-scroll .dropdown-menu.show li:hover {
+    background-color: black !important;
+    padding: 5px;
+}
 .navbar-nav-scroll .dropdown-menu.show a {
     color: white !important;
+    font-family: var(--font-family-paragraph);
 }
 
 /* FooterComponent */
