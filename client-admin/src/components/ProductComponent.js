@@ -21,7 +21,7 @@ class Product extends Component{
         const prods = this.state.products.map((item) => {
             return (
                 <tr key ={ item._id } className="datatable" onClick={() => this.trItemClick(item)}>
-                    <td scope="row">{ item._id }</td>
+                    <td>{ item._id }</td>
                     <td>{ item.name }</td>
                     <td>{ item.price } </td>
                     <td>{ new Date(item.cdate).toLocaleString() } </td>
