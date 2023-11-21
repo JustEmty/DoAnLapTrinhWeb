@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { Component } from 'react';
 import MyContext from '../contexts/MyContext';
 import withRouter from '../utils/withRouter';
+import logo from '../assets/Logo.jpg';
 
 class Login extends Component {
     
@@ -10,8 +11,8 @@ class Login extends Component {
     constructor(props){
         super(props);
         this.state = {
-            txtUsername: 'sonkk',
-            txtPassword: '123 '
+            txtUsername: '',
+            txtPassword: ''
         };
     }
 
@@ -19,6 +20,9 @@ class Login extends Component {
         return(
             <div className='login-container'>
                 <form className='form-login'>
+                    <div className='logo-container'>
+                        <img className='logo' src={logo} alt='logo' />
+                    </div>
                     <h1 class="h3 mb-3 fw-normal text-center">Đăng nhập</h1>
                     <div class="form-floating mt-2">
                         <input type="text" class="form-control" id="floatingUsername" placeholder="Username" value={ this.state.txtUsername } onChange={(e) => { this.setState({ txtUsername: e.target.value }) }} />

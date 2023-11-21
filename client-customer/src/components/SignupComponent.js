@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { Component } from 'react';
+import logo from '../assets/Logo.jpg';
 
 class Signup extends Component {
 
@@ -18,6 +19,9 @@ class Signup extends Component {
         return(
             <div className='signup-container'>
                 <form className='form-signup'>
+                    <div className='logo-container'>
+                        <img className='logo' src={logo} alt='logo' />
+                    </div>
                     <h1 class="h3 mb-3 fw-normal text-center">Đăng ký</h1>
                     <div class="form-floating mt-2">
                         <input type="text" class="form-control" id="floatingUsername" placeholder="Tên đăng nhập" value={ this.state.txtUsername } onChange={(e) => { this.setState({ txtUsername: e.target.value }) }} />
