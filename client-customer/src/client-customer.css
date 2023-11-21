@@ -5,10 +5,12 @@
 :root{
     --primary-color: #0F1866;
     --secondary-color: #BFC6FF;
+    --third-color: #D9DDFF;
     --primary-gradient: linear-gradient(to left top, var(--primary-color), var(--secondary-color));
 
     --font-color-black: #20212A;
     --font-color-white: #EAEDFF;
+    --font-color-white-75percent: rgba(234, 237, 255, .75);
     --font-color-white-50percent: rgba(234, 237, 255, .5);
 
     --font-family-paragraph: 'Crimson Text', Arial, Helvetica, sans-serif;;
@@ -36,8 +38,9 @@
     height: 4.5em;
     margin-bottom: 5vh;
     background-color: white;
-    box-shadow: 1px 2px 4px black;
+    border: 1px solid var(--primary-color);
 }
+
 @media screen and (max-width: 1300px) {
     .nav-menu{
         width: 85%;
@@ -47,14 +50,16 @@
     }
 }
 
-.navbar-brand{
-    width: 15%;
+.nav-logo{
+    width: 60px;
+    border-radius: 0.75em;
 }
 
 .nav-client-customer{
     width: 60%;
     margin: auto;
 }
+
 @media screen and (max-width: 1300px) {
     .nav-client-customer{
         width: 100%;
@@ -66,6 +71,7 @@
     color: black;
     font-weight: 600;
 }
+
 .dropdown-menu{
     width: 40%;
 }
@@ -83,6 +89,7 @@
 .container-search{
     width: 30%;
 }
+
 @media screen and (max-width: 1300px) {
     .container-search{
         width: 90%;
@@ -90,11 +97,36 @@
 }
 
 .btn-search{
+    background-color: white;
+    border: 1px solid var(--primary-color);
+    border-radius: .8em;
+    font-size: 15px;
+    width: 20vh;
+    font-family: var(--font-family-paragraph);
+    color: var(--font-color-black);
+}
+
+.btn-search:hover{
     background-color: #BFC6FF;
     border: none;
     border-radius: 10px;
     font-size: 15px;
     width: 20vh;
+    transition: all 0.3s ease-in-out;
+}
+
+.padding-nav{
+    padding: 1em .4em;
+    font-family: var(--font-family-header);
+    font-size: 18px;
+    color: var(--font-color-black);
+}
+
+.padding-nav:hover{
+    color: var(--secondary-color);
+    border-bottom: 2px solid;
+    border-image-slice: 1;
+    border-image-source: var(--primary-gradient);
 }
 
 /*InformComponent*/
@@ -138,14 +170,11 @@ div.inline{
     margin: 0px auto;
 }
 
-.text-name-new{
-    color: black;
+.header-product-name{
+    color: var(--font-color-black);
     margin-left: 130px;
-}
-
-.text-name-hot{
-    color: white;
-    margin-left: 130px;
+    margin-bottom: .5em;
+    font-family: var(--font-family-header);
 }
 
 .item-picture-new{
@@ -182,17 +211,55 @@ div.inline{
 .contain-main-new{
     background-color: #BFC6FF;
 }
-.discover-button{
-    background-color: #BFC6FF;
-    border: none;
+
+.hero-container button{
+    background-color: var(--secondary-color);
     padding: 15px 40px;
-    border-radius: 30px;
+    border-radius: .7em;
     font-weight: 500;
     font-size: 20px;
+    color: var(--font-color-black);
+    font-family: var(--font-family-paragraph);
+}
+
+.hero-container button:hover{
+    background-color: var(--third-color);
+    border: 2px solid var(--secondary-color);
+    color: var(--primary-color);
+    transition: all ease-in-out .1s;
 }
 
 .container-first{
     background-color: #BFC6FF;
+}
+
+.hero-container{
+    background-color: var(--primary-color);
+    margin: 12vh 0;
+}
+
+.hero-container h1{
+    color: var(--font-color-white);
+    font-family: var(--font-family-header);
+    font-style: normal;
+    font-size: 50px;
+}
+
+.hero-container p{
+    font-family: var(--font-family-paragraph);
+    color: var(--font-color-white-75percent);
+}
+
+.new-product-container{
+    margin-bottom: 10vh;
+}
+
+.product-container-1{
+    background-color: var(--secondary-color);
+}
+
+.product-container-2{
+    background-color: var(--primary-color);
 }
 
 /*MainComponent*/
@@ -338,4 +405,14 @@ h5{
 
 .navbar-nav-scroll .dropdown-menu.show a {
     color: white !important;
+}
+
+/* FooterComponent */
+.text-default-white-70percent{
+    font-family: var(--font-family-paragraph);
+    color: var(--font-color-white-75percent);
+}
+
+.text-default-white-70percent:hover{
+    color: var(--font-color-white);
 }

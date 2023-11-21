@@ -12,7 +12,7 @@ class Footer extends Component{
                         <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
                             <img className="footer-logo" src={logo}/>
                         </a>
-                        <span class="mb-3 mb-md-0">© 2023 Company, Inc</span>
+                        <span class="mb-3 mb-md-0">© 2023 Nhóm Tài, Tuấn, Hiếu, Hậu, Thông</span>
                     </div>
                     <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
                         <li class="nav-item"><Link to="/admin/home" class="nav-link px-2 link-footer-text">Home</Link></li>
