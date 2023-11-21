@@ -31,7 +31,7 @@ class Home extends Component {
                   <div className="card p-3">
                     <div className="text-center">
                       <Link to={'/product/' + item._id}>
-                        <img src={"data:image/jpg;base64," + item.image} width="200px" height="250px" alt="" />
+                      <img src={"data:image/jpg;base64," + item.image} alt="" className="img-fluid" style={{ width: '200px', height: '250px' }} />
                       </Link>
                     </div>
                     <div className="product-details">
@@ -49,11 +49,11 @@ class Home extends Component {
           
         const hotprods = this.state.hotprods.map((item) => {
             return(
-                <div key={item._id} className="col-md-3">
+              <div key={item._id} className="col-md-3">
               <div className="card p-3">
                 <div className="text-center">
                   <Link to={'/product/' + item._id}>
-                    <img src={"data:image/jpg;base64," + item.image} width="200px" height="250px" alt="" />
+                  <img src={"data:image/jpg;base64," + item.image} alt="" className="img-fluid" style={{ width: '200px', height: '250px' }} />
                   </Link>
                 </div>
                 <div className="product-details">
@@ -79,10 +79,7 @@ class Home extends Component {
                   <div className="img-intro">
                     {this.state.hotprods.length > 0 && (
                       <img
-                        src={"data:image/jpg;base64," + this.state.hotprods[0].image}
-                        width="300px"
-                        height="350px"
-                        alt=""
+                        src={"data:image/jpg;base64," + this.state.hotprods[0].image} alt="" className="img-fluid" style={{ width: '300px', height: '350px' }}
                       />
                     )}
                   </div>
