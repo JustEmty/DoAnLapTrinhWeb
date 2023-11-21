@@ -48,41 +48,47 @@ class Order extends Component {
             });
         }
         return(
-            <div>
+            <div class ="table-container">
                 <div className="align-center">
                     <h2 className="text-center">ORDER LIST</h2>
-                    <table className="datatable" border ="1">
-                        <tbody>
-                            <tr className="datatable">
-                                <th>ID</th>
-                                <th>Creation date</th>
-                                <th>Cust.name</th>
-                                <th>Cust.phone</th>
-                                <th>Total</th>
-                                <th>Status</th>
-                                <th>Action</th>
-                            </tr>
-                            { orders }
-                        </tbody>
-                    </table>
+                    <div className = "col-8 col-sm-8 col-md-8 tabledata datatable-order">
+                        <table className="table table-hover col-7">
+                            <tbody>
+                                <tr className="datatable">
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Creation date</th>
+                                    <th scope="col">Cust.name</th>
+                                    <th scope="col">Cust.phone</th>
+                                    <th scope="col">Total</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                                { orders }
+                            </tbody>
+                        </table>
+
+                    </div>
                 </div>
                 { this.state.order ?
                     <div className="align-center">
                         <h2 className="text-center">ORDER DETAIL</h2>
-                        <table className="datatable" border ="1">
+                        <div className="col-8 col-sm-8 col-md-8 tabledata datatable-order">
+                        <table className="table table-hover col-7">
                             <tbody>
                                 <tr className="datatable">
-                                    <th>No.</th>
-                                    <th>Prod.ID</th>
-                                    <th>Prod.name</th>
-                                    <th>Image</th>
-                                    <th>Price</th>
-                                    <th>Quantity</th>
-                                    <th>Amount</th>
+                                    <th scope="col">No.</th>
+                                    <th scope="col">Prod.ID</th>
+                                    <th scope="col">Prod.name</th>
+                                    <th scope="col">Image</th>
+                                    <th scope="col">Price</th>
+                                    <th scope="col">Quantity</th>
+                                    <th scope="col">Amount</th>
                                 </tr>
                                 { items }
                             </tbody>
                         </table>
+
+                        </div>
                     </div>
                 : <div />}
             </div>
