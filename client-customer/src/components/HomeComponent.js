@@ -74,13 +74,7 @@ class Home extends Component {
                 <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
                   <div className="col-10 col-sm-8 col-lg-6">
                     {this.state.hotprods.length > 0 && (
-<<<<<<< HEAD
                       <img src={"data:image/jpg;base64," + this.state.hotprods[0].image} className='item-picture-hot' width="300px" height="350px" loading="lazy" alt="hot-product-image"/>
-=======
-                      <img
-                        src={"data:image/jpg;base64," + this.state.hotprods[0].image} alt="" className="img-fluid" style={{ width: '300px', height: '350px' }}
-                      />
->>>>>>> 2cdad623d099a010e01e6b28e48732ccfdc74065
                     )}
                   </div>
                   <div className="col-lg-6">
