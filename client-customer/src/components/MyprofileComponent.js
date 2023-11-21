@@ -5,9 +5,9 @@ import MyContext from '../contexts/MyContext';
 
 class Myprofile extends Component {
 
-    static contextType = MyContext ; // using this . context to access global state
+    static contextType = MyContext; // using this.context to access global state
 
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
             txtUsername: '',
@@ -18,12 +18,12 @@ class Myprofile extends Component {
         };
     }
 
-    render(){
-        if(this.context.token === '') return (<Navigate replace to ='/login' />) ;
-        return(
+    render() {
+        if (this.context.token === '') return (<Navigate replace to='/login' />);
+        return (
             <div className='myprofile-container'>
                 <form className='form-myprofile'>
-                    <h1 class="h3 mb-3 fw-normal text-center">Tài khoản của tôi</h1>
+                    <h1 className="h3 mb-3 fw-normal text-center">Tài khoản của tôi</h1>
                     <div class="form-floating mt-2">
                         <input type="text" class="form-control" id="floatingUsername" placeholder="Tên đăng nhập" value={ this.state.txtUsername } onChange={(e) => { this.setState({ txtUsername: e.target.value }) }} />
                         <label for="floatingUsername">Tên đăng nhập</label>
@@ -44,14 +44,14 @@ class Myprofile extends Component {
                         <input type="text" class="form-control" id="floatingEmail" placeholder="Email" value={ this.state.txtEmail } onChange={(e) => { this.setState({ txtEmail: e.target.value }) }} />
                         <label for="floatingEmail">Email</label>
                     </div>
-                    <button class="w-100 btn btn-lg btn-warning mt-4" type="submit" onClick={(e) => this.btnActiveClick(e) }>Cập nhật</button>
+                    <button className="w-100 btn btn-lg btn-warning mt-4" type="submit" onClick={(e) => this.btnUpdateClick(e)}>Cập nhật</button>
                 </form>
             </div>
         );
     }
 
-    componentDidMount(){
-        if(this.context.customer){
+    componentDidMount() {
+        if (this.context.customer) {
             this.setState({
                 txtUsername: this.context.customer.username,
                 txtPassword: this.context.customer.password,
@@ -63,33 +63,38 @@ class Myprofile extends Component {
     }
 
     // event - handlers
-    btnUpdateClick(e){
+    btnUpdateClick(e) {
         e.preventDefault();
         const username = this.state.txtUsername;
         const password = this.state.txtPassword;
         const name = this.state.txtName;
         const phone = this.state.txtPhone;
         const email = this.state.txtEmail;
-        if(username && password && name && phone && email){
-            const customer = { username: username, password: password, name: name, phone: phone, email: email };
-            this.apiPutCustomer(this.context.customer._id, customer);
+        if (username && password && name && phone && email) {
+            const customer = { username, password, name, phone, email };
+            this.apiPutCustomerProfile(this.context.customer._id, customer);
         } else {
-            alert('Please input username and password and name and phone and email');
+            alert('Please input username, password, name, phone, and email');
         }
     }
 
-    // apis
-    apiPutCustomer(id, customer){
+    // APIs
+    apiPutCustomerProfile(id, customer) {
         const config = { headers: { 'x-access-token': this.context.token } };
-        axios.put('/api/customer/customers/' + id, customer, config).then((res) => {
-            const result = res.data;
-            if(result){
-                alert('OK BABY!');
-                this.context.setCustomer(result);
-            } else {
-                alert('SORRY BABY!');
-            }
-        });
+        axios.put(`/api/customer/customers/${id}`, customer, config)
+            .then((res) => {
+                const result = res.data;
+                if (result) {
+                    alert('OK BABY!');
+                    this.context.setCustomer(result);
+                } else {
+                    alert('SORRY BABY!');
+                }
+            })
+            .catch((error) => {
+                console.error('Error updating customer:', error);
+                alert('An error occurred while updating the customer.');
+            });
     }
 }
 
