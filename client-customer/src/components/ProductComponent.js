@@ -15,21 +15,22 @@ class Product extends Component {
     render(){
         const prods = this.state.products.map((item) => {
             return (
-                <div key={item._id} className="inline">
-                  <figure>
-                    <Link to={'/product/' + item._id} className='item-picture'>
-                      <img src={"data:image/jpg;base64," + item.image} width="300px" height="300px" alt="" />
-                    </Link>
-                    <figcaption className="text-center">{item.name}<br/>Price: {item.price}</figcaption>
-                  </figure>
-                  <div className="product-details">
-                    <span className="font-weight-bold d-block">Price: {item.price}</span>
-                    <span>{item.name}</span>
-                    <Link to={'/product/' + item._id}>
-                      <button type="button" className="btn btn-dark">View Products</button>
-                    </Link>
-                  </div>
-                </div>
+              <div key={item._id} className="inline">
+              <figure>
+                <Link to={'/product/' + item._id} className='item-picture'>
+                  <img src={"data:image/jpg;base64," + item.image} width="300px" height="300px" alt="" />
+                </Link>
+                <figcaption className="text-center">
+                  {item.name}
+                </figcaption>
+              </figure>
+              <div className="product-details">
+                <span className="font-weight-bold d-block">Price: {item.price}</span>
+                <Link to={'/product/' + item._id}>
+                  <button type="button" className="btn btn-dark">View Products</button>
+                </Link>
+              </div>
+            </div>
               )}
             );
           
