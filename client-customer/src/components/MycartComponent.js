@@ -25,30 +25,32 @@ class Mycart extends Component {
             );
         });
         return(
-            <div className="align-center">
+            <div class="row table-container">
                 <h2 className="text-center">ITEM LIST</h2>
-                <table className="table table-bordered" border ="1">
-                    <tbody>
-                        <tr className="table-dark">
-                            <th>No.</th>
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th>Category</th>
-                            <th>Image</th>
-                            <th>Price</th>
-                            <th>Quantity</th>
-                            <th>Amount</th>
-                            <th>Action</th>
-                        </tr>
-                        { mycart }
-                        <tr>
-                            <td colSpan="6" ></td>
-                            <td>Total</td>
-                            <td>{ CartUtil.getTotal(this.context.mycart) }</td>
-                            <td><button type="button" className="btn btn-dark" onClick={() => this.lnkCheckoutClick()}>CHECKOUT</button></td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="col-8 col-sm-8 col-md-8 tabledata">
+                    <table class="table table-hover col-7">
+                        <tbody>
+                            <tr>
+                                <th scope="col">No.</th>
+                                <th scope="col">ID</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Category</th>
+                                <th scope="col">Image</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col">Amount</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                            { mycart }
+                            <tr>
+                                <td colSpan="6" ></td>
+                                <td>Total</td>
+                                <td>{ CartUtil.getTotal(this.context.mycart) }</td>
+                                <td><button type="button" className="checkout-button" onClick={() => this.lnkCheckoutClick()}>CHECKOUT</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         );
     }
