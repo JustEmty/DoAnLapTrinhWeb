@@ -1,0 +1,8 @@
+/* In your CSS file or style tag */
+.navbar .nav-item.dropdown .dropdown-menu.bg-warning {
+    background-color:#BFC6FF !important;
+}
+.navbar .nav-item.dropdown .dropdown-menu.bg-warning li:hover {
+    background-color: #7179BB !important;
+    color: #333 !important; /* Adjust the hover color as needed */
+}
