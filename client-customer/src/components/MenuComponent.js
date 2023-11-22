@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import withRouter from '../utils/withRouter';
 import MyContext from '../contexts/MyContext';
 import logo from '../assets/Logo.jpg';
+import "../MenuComponent.css"
 
 class Menu extends Component {
     
@@ -51,7 +52,7 @@ class Menu extends Component {
                             </ul>
                             <form className="d-flex container-search">
                                 <input className="form-control me-2 form-search" type="search" placeholder="Tìm kiếm" aria-label="Search" value ={this.state.txtKeyword} onChange={(e) => { this.setState({ txtKeyword: e.target.value }) }} />
-                                <button className="btn-search" type="button" value ="SEARCH" onClick={(e) => this.btnSearchClick(e) } >Tìm kiếm</button>
+                                <button className="btn-search" type="submit" value ="SEARCH" onClick={(e) => this.btnSearchClick(e) } >Tìm kiếm</button>
                             </form>
                         </div>
                     </div>
@@ -77,4 +78,5 @@ class Menu extends Component {
         });
     }
 }
+
 export default withRouter(Menu);
