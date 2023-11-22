@@ -5,7 +5,6 @@ import withRouter from '../utils/withRouter';
 import MyContext from '../contexts/MyContext';
 import logo from '../assets/Logo.jpg';
 import "../MenuComponent.css"
-
 class Menu extends Component {
     
     static contextType = MyContext; // using this . context to access global state

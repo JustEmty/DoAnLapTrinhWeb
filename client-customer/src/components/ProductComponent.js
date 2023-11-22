@@ -15,32 +15,35 @@ class Product extends Component {
     render(){
         const prods = this.state.products.map((item) => {
             return (
-              <div key={item._id} className="inline">
-              <figure>
-                <Link to={'/product/' + item._id} className='item-picture'>
-                  <img src={"data:image/jpg;base64," + item.image} width="300px" height="300px" alt="" />
-                </Link>
-                <figcaption className="text-center">
-                  {item.name}
-                </figcaption>
-              </figure>
-              <div className="product-details">
-                <span className="font-weight-bold d-block">Price: {item.price}</span>
-                <Link to={'/product/' + item._id}>
-                  <button type="button" className="btn btn-dark">View Products</button>
-                </Link>
+              <div key={item._id} className="col-md-3">
+                <div className="custom-card">
+                  <div className="card p-3">
+                    <div className="text-center">
+                      <Link to={'/product/' + item._id}>
+                      <img src={"data:image/jpg;base64," + item.image} alt="" className="img-fluid" style={{ width: '200px', height: '250px' }} />
+                      </Link>
+                    </div>
+                    <div className="product-details">
+                      <span className="font-weight-bold d-block">Price: {item.price}</span>
+                      <span>{item.name}</span>
+                    </div>
+                    <Link to={'/product/' + item._id}>
+                      <button type="button" className="btn btn-dark">View Products</button>
+                    </Link>
+                  </div>
+                </div>
               </div>
-            </div>
+
               )}
             );
           
           return (
-            <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
-              <div class="my-3 py-3">
-                <div className="text-center">
-                <h2 className="text-center text-mt">LIST PRODUCTS</h2>
-                  <div className="row justify-content-center g-3">
-                  {prods}
+            <div className='new-product-container'>
+              <h2 ref={this.newProductsRef} className="header-product-name">Sản Phẩm</h2>
+              <div className="p-4 p-md-5 mb-4 text-white product-container-1">
+                <div className="my-3 py-3">
+                  <div className="text-center">
+                    <div className="row justify-content-center g-3">{prods}</div>
                   </div>
                 </div>
               </div>
