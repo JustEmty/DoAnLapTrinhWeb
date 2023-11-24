@@ -234,3 +234,9 @@
 .datatable-order {
     margin: auto;
 }
+
+.hover-page{
+    padding-top: 1em;
+    cursor: pointer;
+    text-align: center;
+}
