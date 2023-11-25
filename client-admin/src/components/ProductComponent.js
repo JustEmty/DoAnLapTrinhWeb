@@ -54,10 +54,8 @@ class Product extends Component{
                         </thead>
                         <tbody>
                             { prods }
-                            <tr>
-                                <td colSpan="6">{ pagination }</td>
-                            </tr>
                         </tbody>
+                        <td colSpan="6" className='hover-page'>{ pagination }</td>
                     </table>
                 </div>
                 <div class="col-6 col-md-4 tabledata-detail">
