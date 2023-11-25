@@ -57,7 +57,7 @@ router.post('/signup', async function(req, res){
     const dbCust = await CustomerDAO.selectByUsernameOrEmail(username, email);
 
     if(dbCust){
-        res.json({ success: false, message: 'Exists username or email' });
+        res.json({ success: false, message: 'Tên người dùng hoặc email đã tồn tại' });
     } else {
         const now = new Date().getTime(); // milliseconds
         const token = CryptoUtil.md5(now.toString());
@@ -67,12 +67,12 @@ router.post('/signup', async function(req, res){
         if(result){
             const send = await EmailUtil.send(email, result._id, token);
             if(send){
-                res.json({ success: true, message: 'Please check email' });
+                res.json({ success: true, message: 'Vui lòng kiểm tra email' });
             } else {
-                res.json({ success: false, message: 'Email failure' });
+                res.json({ success: false, message: 'Lỗi Email' });
             }
         } else {
-            res.json({ success: false, message: 'Insert failure' });
+            res.json({ success: false, message: 'Chèn thất bại' });
         }
     }
 });
@@ -93,21 +93,21 @@ router.post('/login', async function(req, res){
         if (customer){
             if(customer.active === 1) {
                 const token = JwtUtil.genToken();
-                res.json({ success: true, message: 'Authentication successful', token: token, customer: customer });
+                res.json({ success: true, message: 'Xác thực thành công', token: token, customer: customer });
             } else {
-                res.json({ success: false, message: 'Account is deactive' });
+                res.json({ success: false, message: 'Tài khoản bị vô hiệu hóa' });
             }
         } else {
-            res.json({ success: false, message: 'Incorrect username or password' });
+            res.json({ success: false, message: 'Tên đăng nhập hoặc mật khẩu không chính xác' });
         }
     } else {
-        res.json({ success: false, message: 'Please input username and password' });
+        res.json({ success: false, message: 'Vui lòng nhập tên người dùng và mật khẩu' });
     }
 });
 
 router.get('/token', JwtUtil.checkToken, function(req, res){
     const token = req.headers['x-access-token'] || req.headers['authorization'];
-    res.json({ success: true, message: 'Token is valid', token: token });
+    res.json({ success: true, message: 'Mã thông báo hợp lệ', token: token });
 });
 
 router.put('/customers/:id', JwtUtil.checkToken, async function(req, res){
@@ -128,7 +128,7 @@ router.post('/checkout', JwtUtil.checkToken, async function(req, res){
     const total = req.body.total;
     const items = req.body.items;
     const customer = req.body.customer;
-    const order = { cdate: now, total: total, status: 'PENDING', customer: customer, items: items };
+    const order = { cdate: now, total: total, status: 'Chưa giải quyết', customer: customer, items: items };
     const result = await OrderDAO.insert(order);
     res.json(result);
 });

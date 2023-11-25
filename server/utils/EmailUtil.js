@@ -10,12 +10,12 @@ const transporter = nodemailer.createTransport({
 });
 const EmailUtil = {
     send(email, id, token){
-        const text = 'Thanks for signing up, please input these informations to activate your account:\n\t .id: ' + id + '\n\t .token: ' + token;
+        const text = 'Cảm ơn bạn đã đăng ký, vui lòng nhập những thông tin sau để kích hoạt tài khoản của bạn:\n\t .id: ' + id + '\n\t .token: ' + token;
         return new Promise(function(resolve, reject){
             const mailOptions = {
                 from: MyConstants.EMAIL_USER,
                 to: email,
-                subject: 'Signup | Verification',
+                subject: 'Đăng ký | Xác minh',
                 text: text
             };
             transporter.sendMail(mailOptions, function(err, result){

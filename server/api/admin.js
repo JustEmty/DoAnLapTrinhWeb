@@ -20,18 +20,18 @@ router.post('/login', async function(req, res){
         const admin = await AdminDAO.selectByUsernameAndPassword(username, password);
         if(admin){
             const token = JwtUtil.genToken();
-            res.json({ success: true, message: 'Authentication successful', token: token });
+            res.json({ success: true, message: 'Xác thực thành công', token: token });
         }else{
-            res.json({ success: false, message: 'Incorrect username or password' });
+            res.json({ success: false, message: 'Tên đăng nhập hoặc mật khẩu không chính xác' });
         }
     }else{
-        res.json({ success: false, message: 'Please input username and password' });
+        res.json({ success: false, message: 'Vui lòng nhập tên người dùng và mật khẩu' });
     }
 });
 
 router.get('/token', JwtUtil.checkToken, function(req, res){
     const token = req.headers['x-access-token'] || req.headers['authorization'];
-    res.json({ success: true, message: 'Token is valid', token: token });
+    res.json({ success: true, message: 'Mã thông báo hợp lệ', token: token });
 });
 
 // category
@@ -146,12 +146,12 @@ router.get('/customers/sendmail/:id', JwtUtil.checkToken, async function(req, re
     if(cust){
         const send = await EmailUtil.send(cust.email, cust._id, cust.token);
         if(send){
-            res.json({ success : true, message: 'Please check email' });
+            res.json({ success : true, message: 'Vui lòng kiểm tra email' });
         }else{
-            res.json({ success: false, message: 'Email failure' });
+            res.json({ success: false, message: 'Lỗi Email' });
         }
     }else{
-        res.json({ success: false , message: 'Not exists customer' });
+        res.json({ success: false , message: 'Khách hàng không tồn tại' });
     }
 });  
 

@@ -107,7 +107,7 @@ class Home extends Component {
                 <div className="p-4 p-md-5 mb-4 text-white product-container-2">
                   <div className="my-3 py-3">
                     <div className="text-center">
-                      <div className="row justify-content-center g-1">{hotprods}</div>
+                      <div className="row justify-content-center g-3">{hotprods}</div>
                     </div>
                   </div>
                 </div>
