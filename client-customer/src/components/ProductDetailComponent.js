@@ -20,7 +20,7 @@ class ProductDetail extends Component {
         if(prod != null){
             return(
                 <div className="align-center">
-                    <h2 className="text-center">PRODUCT DETAILS</h2>
+                    <h2 className="text-center">Chi tiết sản phẩm</h2>
                     <figure className="caption-right">
                         <img src={"data:image/jpg;base64," + prod.image} width="400px" height="400px" alt="" />
                         <figcaption>
@@ -32,24 +32,24 @@ class ProductDetail extends Component {
                                             <td>{ prod._id }</td>
                                         </tr>
                                         <tr>
-                                            <td align="right">Name:</td>
+                                            <td align="right">Tên sản phẩm:</td>
                                             <td>{ prod.name }</td>
                                         </tr>
                                         <tr>
-                                            <td align="right">Price:</td>
+                                            <td align="right">Giá:</td>
                                             <td>{ prod.price }</td>
                                         </tr>
                                         <tr>
-                                            <td align="right">Category:</td>
+                                            <td align="right">Thể loại:</td>
                                             <td>{ prod.category.name }</td>
                                         </tr>
                                         <tr>
-                                            <td align="right">Quantity:</td>
+                                            <td align="right">Số lượng:</td>
                                             <td><input type="number" min="1" max="99" value={ this.state.txtQuantity } onChange={(e) => { this.setState({ txtQuantity: e.target.value }) }} /></td>
                                         </tr>
                                         <tr>
                                             <td></td>
-                                            <td><input type="submit" value="ADD TO CART" onClick={(e) => this.btnAdd2CartClick(e)} /></td>
+                                            <td><input type="submit" value="Thêm giỏ hàng" onClick={(e) => this.btnAdd2CartClick(e)} /></td>
                                         </tr>
                                     </tbody>
                                 </table>

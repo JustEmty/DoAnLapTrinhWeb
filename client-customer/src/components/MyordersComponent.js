@@ -49,16 +49,16 @@ class Myorders extends Component {
         return(
             <div>
                 <div className="align-center">
-                    <h2 className="text-center">ORDER LIST</h2>
+                    <h2 className="text-center">Danh sách đơn hàng</h2>
                     <table className="table table-bordered" border="1">
                         <tbody>
                             <tr className="table-dark">
                                 <th>ID</th>
-                                <th>Creation date</th>
-                                <th>Cust.name</th>
-                                <th>Cust.phone</th>
-                                <th>Total</th>
-                                <th>Status</th>
+                                <th>Ngày mua hàng</th>
+                                <th>Tên khách hàng</th>
+                                <th>Số điện thoại</th>
+                                <th>Tổng cộng</th>
+                                <th>Trạng thái</th>
                             </tr>
                             { orders }
                         </tbody>
@@ -66,17 +66,17 @@ class Myorders extends Component {
                 </div>
                 { this.state.order ?
                     <div className="align-center">
-                        <h2 className="text-center">ORDER DETAIL</h2>
+                        <h2 className="text-center">Chi tiết đơn hàng</h2>
                         <table className="table table-bordered" border ="1">
                             <tbody>
                                 <tr className="table-dark">
-                                    <th>No.</th>
-                                    <th>Prod.ID</th>
-                                    <th>Prod.name</th>
-                                    <th>Image</th>
-                                    <th>Price</th>
-                                    <th>Quantity</th>
-                                    <th>Amount</th>
+                                    <th>STT</th>
+                                    <th>ID</th>
+                                    <th>Tên sản phẩm</th>
+                                    <th>Hình ảnh</th>
+                                    <th>Giá</th>
+                                    <th>Số lượng</th>
+                                    <th>Tổng cộng</th>
                                 </tr>
                                 { items }
                             </tbody>

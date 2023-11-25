@@ -24,11 +24,11 @@ class Product extends Component {
                       </Link>
                     </div>
                     <div className="product-details">
-                      <span className="font-weight-bold d-block">Price: {item.price}</span>
+                      <span className="font-weight-bold d-block">Giá: {item.price}</span>
                       <span>{item.name}</span>
                     </div>
                     <Link to={'/product/' + item._id}>
-                      <button type="button" className="btn btn-dark">View Products</button>
+                      <button type="button" className="btn btn-dark">Chi tiết sản phẩm</button>
                     </Link>
                   </div>
                 </div>

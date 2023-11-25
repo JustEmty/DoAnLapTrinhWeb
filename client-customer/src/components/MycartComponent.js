@@ -20,33 +20,33 @@ class Mycart extends Component {
                     <td>{ item.product.price }</td>
                     <td>{ item.quantity }</td>
                     <td>{ item.product.price * item.quantity }</td>
-                    <td><button type="button" className="btn btn-warning" onClick={() => this.lnkRemoveClick(item.product._id)}>Remove</button></td>
+                    <td><button type="button" className="btn btn-warning" onClick={() => this.lnkRemoveClick(item.product._id)}>Xóa</button></td>
                 </tr> 
             );
         });
         return(
             <div class="row table-container">
-                <h2 className="text-center">ITEM LIST</h2>
+                <h2 className="text-center">Danh sách sản phẩm</h2>
                 <div class="col-8 col-sm-8 col-md-8 tabledata">
                     <table class="table table-hover col-7">
                         <tbody>
                             <tr>
-                                <th scope="col">No.</th>
+                                <th scope="col">STT</th>
                                 <th scope="col">ID</th>
-                                <th scope="col">Name</th>
-                                <th scope="col">Category</th>
-                                <th scope="col">Image</th>
-                                <th scope="col">Price</th>
-                                <th scope="col">Quantity</th>
-                                <th scope="col">Amount</th>
-                                <th scope="col">Action</th>
+                                <th scope="col">Tên sản phẩm</th>
+                                <th scope="col">Loại sản phẩm</th>
+                                <th scope="col">Hình ảnh</th>
+                                <th scope="col">Giá</th>
+                                <th scope="col">Số lượng</th>
+                                <th scope="col">Tổng cộng</th>
+                                <th scope="col">Hành động</th>
                             </tr>
                             { mycart }
                             <tr>
                                 <td colSpan="6" ></td>
                                 <td>Total</td>
                                 <td>{ CartUtil.getTotal(this.context.mycart) }</td>
-                                <td><button type="button" className="checkout-button" onClick={() => this.lnkCheckoutClick()}>CHECKOUT</button></td>
+                                <td><button type="button" className="checkout-button" onClick={() => this.lnkCheckoutClick()}>Thanh toán</button></td>
                             </tr>
                         </tbody>
                     </table>
