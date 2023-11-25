@@ -85,7 +85,7 @@ class ProductDetail extends Component{
                     <div class="mb-3 row">
                         <label for="inputName" class="col-sm-2 col-form-label">Price</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputName" value={ this.state.txtPrice } onChange={(e) => { this.setState({ txtName: e.target.value }) }} />
+                            <input type="text" class="form-control" id="inputName" value={ this.state.txtPrice } onChange={(e) => { this.setState({ txtPrice: e.target.value }) }} />
                         </div>
                     </div>
                     <div class="mb-3 row">
