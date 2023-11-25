@@ -66,7 +66,7 @@ class Mycart extends Component {
     }
 
     lnkCheckoutClick(){
-        if(window.confirm('ARE YOU SURE?')){
+        if(window.confirm('Bạn có chắc chắn muốn thanh toán?')){
             if (this.context.mycart.length > 0){
                 const total = CartUtil.getTotal(this.context.mycart);
                 const items = this.context.mycart;
@@ -78,7 +78,7 @@ class Mycart extends Component {
                     this.props.navigate('/login');
                 }
             } else {
-                alert('Your cart is empty');
+                alert('Giỏ hàng của bạn đang trống');
             }
         }
     }
@@ -90,11 +90,11 @@ class Mycart extends Component {
         axios.post('/api/customer/checkout', body, config).then((res) => {
             const result = res.data;
             if(result){
-                alert('OK BABY!');
+                alert('Thanh toán thành công');
                 this.context.setMycart([]);
                 this.props.navigate('/home');
             } else {
-                alert('SORRY BABY!');
+                alert('Thanh toán thất bại');
             }
         });
     }

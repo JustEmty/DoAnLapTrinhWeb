@@ -48,7 +48,7 @@ class  Login extends Component{
             const account = { username: username, password: password };
             this.apiLogin(account);
         }else{
-            alert('Please input username and password');
+            alert('Vui lòng nhập tên người dùng và mật khẩu');
         }
     }
 

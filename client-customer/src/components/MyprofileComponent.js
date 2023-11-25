@@ -74,7 +74,7 @@ class Myprofile extends Component {
             const customer = { username, password, name, phone, email };
             this.apiPutCustomerProfile(this.context.customer._id, customer);
         } else {
-            alert('Please input username, password, name, phone, and email');
+            alert('Vui lòng nhập đầy đủ thông tin');
         }
     }
 
@@ -85,15 +85,15 @@ class Myprofile extends Component {
             .then((res) => {
                 const result = res.data;
                 if (result) {
-                    alert('OK BABY!');
+                    alert('Cập nhật thành công');
                     this.context.setCustomer(result);
                 } else {
-                    alert('SORRY BABY!');
+                    alert('Cập nhật thất bại');
                 }
             })
             .catch((error) => {
-                console.error('Error updating customer:', error);
-                alert('An error occurred while updating the customer.');
+                console.error('Lỗi cập nhật khách hàng:', error);
+                alert('Đã xảy ra lỗi khi cập nhật thông tin khách hàng.');
             });
     }
 }

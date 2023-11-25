@@ -38,7 +38,7 @@ class Active extends Component {
         if(id && token){
             this.apiActive(id, token);
         } else {
-            alert('Please input id and token');
+            alert('Vui lòng nhập id và token đã được gửi về email của bạn');
         }
     }
 
@@ -48,9 +48,9 @@ class Active extends Component {
         axios.post('/api/customer/active', body).then((res) => {
             const result = res.data;
             if(result){
-                alert('OK BABY!');
+                alert('Xác thực tài khoản thành công');
             } else {
-                alert('SORRY BABY!');
+                alert('Vui lòng nhập lại id và token');
             }
         });
     }
