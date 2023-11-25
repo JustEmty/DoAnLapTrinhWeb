@@ -15,11 +15,11 @@ class Footer extends Component{
                         <span class="mb-3 mb-md-0">© 2023 Nhóm Tài, Tuấn, Hiếu, Hậu, Thông</span>
                     </div>
                     <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                        <li class="nav-item"><Link to="/admin/home" class="nav-link px-2 link-footer-text">Home</Link></li>
-                        <li class="nav-item"><Link to="/admin/category" class="nav-link px-2 link-footer-text">Category</Link></li>
-                        <li class="nav-item"><Link to="/admin/product" class="nav-link px-2 link-footer-text">Product</Link></li>
-                        <li class="nav-item"><Link to="/admin/order" class="nav-link px-2 link-footer-text">Order</Link></li>
-                        <li class="nav-item"><Link to="/admin/customer" class="nav-link px-2 link-footer-text">Customer</Link></li>
+                        <li class="nav-item"><Link to="/admin/home" class="nav-link px-2 link-footer-text">Trang chủ</Link></li>
+                        <li class="nav-item"><Link to="/admin/category" class="nav-link px-2 link-footer-text">Thể loại</Link></li>
+                        <li class="nav-item"><Link to="/admin/product" class="nav-link px-2 link-footer-text">Sản phẩm</Link></li>
+                        <li class="nav-item"><Link to="/admin/order" class="nav-link px-2 link-footer-text">Đơn đặt hàng</Link></li>
+                        <li class="nav-item"><Link to="/admin/customer" class="nav-link px-2 link-footer-text">Khách hàng</Link></li>
                     </ul>
                 </footer>
             </div>

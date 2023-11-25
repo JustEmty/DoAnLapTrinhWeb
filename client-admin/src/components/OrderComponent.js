@@ -26,7 +26,7 @@ class Order extends Component {
                     <td>{ item.status }</td>
                     <td>
                         { item.status === 'PENDING' ?
-                        <div><span className="link" onClick={() => this.lnkApproveClick(item._id)}>APPROVE</span> || <span className="link" onClick={() => this.lnkCancelClick(item._id)}>CANCEL</span></div>
+                        <div><span className="link action" onClick={() => this.lnkApproveClick(item._id)}>Chấp Nhận</span> || <span className="link action" onClick={() => this.lnkCancelClick(item._id)}>Hủy</span></div>
                        : <div />}
                     </td>
                 </tr>
@@ -50,18 +50,18 @@ class Order extends Component {
         return(
             <div class ="table-container">
                 <div className="align-center">
-                    <h2 className="text-center">ORDER LIST</h2>
+                    <h2 className="text-center">DANH SÁCH CÁC ĐƠN ĐẶT HÀNG</h2>
                     <div className = "col-8 col-sm-8 col-md-8 tabledata datatable-order">
                         <table className="table table-hover col-7">
                             <tbody>
                                 <tr className="datatable">
                                     <th scope="col">ID</th>
-                                    <th scope="col">Creation date</th>
-                                    <th scope="col">Cust.name</th>
-                                    <th scope="col">Cust.phone</th>
-                                    <th scope="col">Total</th>
-                                    <th scope="col">Status</th>
-                                    <th scope="col">Action</th>
+                                    <th scope="col">Ngày khởi tạo</th>
+                                    <th scope="col">Tên khách hàng</th>
+                                    <th scope="col">SĐT khách hàng</th>
+                                    <th scope="col">Tổng</th>
+                                    <th scope="col">Trạng thái</th>
+                                    <th scope="col">Thao tác</th>
                                 </tr>
                                 { orders }
                             </tbody>
@@ -71,18 +71,18 @@ class Order extends Component {
                 </div>
                 { this.state.order ?
                     <div className="align-center">
-                        <h2 className="text-center">ORDER DETAIL</h2>
+                        <h2 className="text-center">Chi Tiết Đơn Đặt Hàng</h2>
                         <div className="col-8 col-sm-8 col-md-8 tabledata datatable-order">
                         <table className="table table-hover col-7">
                             <tbody>
                                 <tr className="datatable">
                                     <th scope="col">No.</th>
-                                    <th scope="col">Prod.ID</th>
-                                    <th scope="col">Prod.name</th>
-                                    <th scope="col">Image</th>
-                                    <th scope="col">Price</th>
-                                    <th scope="col">Quantity</th>
-                                    <th scope="col">Amount</th>
+                                    <th scope="col">ID sản phẩm</th>
+                                    <th scope="col">Tên sản phẩm</th>
+                                    <th scope="col">Hình ảnh</th>
+                                    <th scope="col">Giá</th>
+                                    <th scope="col">Số lượng</th>
+                                    <th scope="col">Tổng</th>
                                 </tr>
                                 { items }
                             </tbody>
@@ -105,11 +105,11 @@ class Order extends Component {
     }
 
     lnkApproveClick(id){
-        this.apiPutOrderStatus(id, 'APPROVED');
+        this.apiPutOrderStatus(id, 'Đã Chấp Nhận');
     }
     
     lnkCancelClick(id){
-        this.apiPutOrderStatus(id, 'CANCELED');
+        this.apiPutOrderStatus(id, 'Đã Hủy');
     }
 
     // apis
@@ -127,9 +127,10 @@ class Order extends Component {
         axios.put('/api/admin/orders/status/' + id, body, config).then((res) => {
             const result = res.data;
             if(result){
+                alert('Cập nhật trạng thái đơn hàng thành công.');
                 this.apiGetOrders();
             }else{
-                alert('SORRY BABY!');
+                alert('Cập nhật trạng thái đơn hàng thất bại.');
             }
         });
     }

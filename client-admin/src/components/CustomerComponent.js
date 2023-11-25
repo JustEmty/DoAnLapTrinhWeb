@@ -30,7 +30,7 @@ class Customer extends Component {
                         { item.active === 0 ?
                             <span className="link" onClick={() => this.lnkEmailClick(item)}>EMAIL</span>
                             :
-                            <span className="link" onClick={() => this.lnkDeactiveClick(item)}>DEACTIVE</span>}
+                            <span className="link" onClick={() => this.lnkDeactiveClick(item)}>HỦY KÍCH HOẠT</span>}
                     </td>
                 </tr>
             );
@@ -65,19 +65,19 @@ class Customer extends Component {
         return (
             <div class ="table-container">
                 <div className="align-center">
-                    <h2 className="text-center">CUSTOMER LIST</h2>
+                    <h2 className="text-center">DANH SÁCH KHÁCH HÀNG</h2>
                     <div className = "col-8 col-sm-8 col-md-8 tabledata datatable-order">
                         <table className="table table-hover col-7">
                             <tbody>
                                 <tr className="datatable">
                                     <th scope="col">ID</th>
-                                    <th scope="col">Username</th>
-                                    <th scope="col">Password</th>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Phone</th>
+                                    <th scope="col">Tên người dùng</th>
+                                    <th scope="col">Mật khẩu</th>
+                                    <th scope="col">Tên</th>
+                                    <th scope="col">Điện thoại</th>
                                     <th scope="col">Email</th>
-                                    <th scope="col">Active</th>
-                                    <th scope="col">Action</th>
+                                    <th scope="col">Kích hoạt</th>
+                                    <th scope="col">Thao tác</th>
                                 </tr>
                                 { customers }
                             </tbody>
@@ -86,17 +86,17 @@ class Customer extends Component {
                 </div>
                 { this.state.orders.length > 0 ?
                     <div className="align-center">
-                        <h2 className="text-center">ORDER LIST</h2>
+                        <h2 className="text-center">Danh Sách Đơn Đặt Hàng</h2>
                         <div className = "col-8 col-sm-8 col-md-8 tabledata datatable-order">
                         <table className="table table-hover col-7">
                             <tbody>
                                 <tr className ="datatable">
                                     <th scope="col">ID</th>
-                                    <th scope="col">Creation date</th>
-                                    <th scope="col">Cust.name</th>
-                                    <th scope="col">Cust.phone</th>
-                                    <th scope="col">Total</th>
-                                    <th scope="col">Status</th>
+                                    <th scope="col">Ngày khởi tạo</th>
+                                    <th scope="col">Tên khách hàng</th>
+                                    <th scope="col">SĐT khách hàng</th>
+                                    <th scope="col">Tổng</th>
+                                    <th scope="col">Trạng thái</th>
                                 </tr>
                                 { orders }
                             </tbody>
@@ -107,18 +107,18 @@ class Customer extends Component {
                 : <div />}
                 { this.state.order ?
                     <div className="align-center">
-                        <h2 className="text-center">ORDER DETAIL</h2>
+                        <h2 className="text-center">Chi Tiết Đơn Đặt Hàng</h2>
                         <div>
                             <table className="table table-hover col-7">
                                 <tbody>
                                     <tr className="datatable">
                                         <th scope="col">No.</th>
                                         <th scope="col">Prod.ID</th>
-                                        <th scope="col">Prod.name</th>
-                                        <th scope="col">Image</th>
-                                        <th scope="col">Price</th>
-                                        <th scope="col">Quantity</th>
-                                        <th scope="col">Amount</th>
+                                        <th scope="col">Tên sản phẩm</th>
+                                        <th scope="col">Hình ảnh</th>
+                                        <th scope="col">Giá</th>
+                                        <th scope="col">Số lượng</th>
+                                        <th scope="col">Tổng</th>
                                     </tr>
                                 { items }
                                 </tbody>
@@ -178,7 +178,7 @@ class Customer extends Component {
             if(result){
                 this.apiGetCustomers();
             }else{
-                alert('SORRY BABY!');
+                alert('Hủy kích hoạt tài khoản thất bại.');
             }
         });
     }

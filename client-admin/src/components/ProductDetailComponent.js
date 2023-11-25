@@ -27,87 +27,47 @@ class ProductDetail extends Component{
             }
         });
         return (
-            // <div className="float-right">
-            //     <h2 className="text-center">PRODUCT DETAIL</h2>
-            //     <form>
-            //         <table>
-            //             <tbody>
-            //                 <tr>
-            //                     <td>ID</td>
-            //                     <td><input type="text" value={ this.state.txtID } onChange={(e) => { this.setState({ txtID: e.target.value }) }} readOnly={ true } /></td>
-            //                 </tr>
-            //                 <tr>
-            //                     <td>Name</td>
-            //                     <td><input type="text" value={ this.state.txtName } onChange={(e) => { this.setState({ txtName: e.target.value }) }} /></td>
-            //                 </tr>
-            //                 <tr>
-            //                     <td>Price</td>
-            //                     <td><input type="text" value={ this.state.txtPrice } onChange={(e) => { this.setState({ txtPrice: e.target.value }) }} /></td>
-            //                 </tr>
-            //                 <tr>
-            //                     <td>Image</td>
-            //                     <td><input type="file" name="fileImage" accept="image/jpeg,image/png,image/gif" onChange={(e) => this.previewImage(e) } /></td>
-            //                 </tr>
-            //                 <tr >
-            //                     <td>Category</td>
-            //                     <td><select onChange={(e) => { this.setState({ cmbCategory: e.target.value }) }} >{ cates }</select></td>
-            //                 </tr>
-            //                 <tr>
-            //                     <td></td>
-            //                     <td>
-            //                         <input type="submit" value="ADD NEW" onClick={(e) => this.btnAddClick(e) } />
-            //                         <input type="submit" value="UPDATE" onClick={(e) => this.btnUpdateClick(e)} />
-            //                         <input type="submit" value="DELETE" onClick={(e) => this.btnDeleteClick(e)} />
-            //                     </td>
-            //                 </tr>
-            //                 <tr>
-            //                     <td colSpan="2"><img src={ this.state.imgProduct } width="300px" height="300px" alt="" /></td>
-            //                 </tr>
-            //             </tbody>
-            //         </table>
-            //     </form>
-            // </div>
             <div className ="float-right">
-                <h2 className="text-center">PRODUCT DETAIL</h2>
+                <h2 className="text-center">Chi Tiết Sản Phẩm</h2>
                 <form className='form-container'>
                     <div class="mb-3 row">
                         <label for="staticID" class="col-sm-2 col-form-label">ID</label>
                         <div class="col-sm-10">
-                            <input type="text" readonly class="form-control-plaintext" id="staticID" value={ this.state.txtID } onChange={(e) => { this.setState({ txtID: e.target.value }) }}/>
+                            <input type="text" readonly='true' class="form-control-plaintext" id="staticID" value={ this.state.txtID } onChange={(e) => { this.setState({ txtID: e.target.value }) }}/>
                         </div>
                     </div>
                     <div class="mb-3 row">
-                        <label for="inputName" class="col-sm-2 col-form-label">Name</label>
+                        <label for="inputName" class="col-sm-2 col-form-label">Sản phẩm</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="inputName" value={ this.state.txtName } onChange={(e) => { this.setState({ txtName: e.target.value }) }} />
                         </div>
                     </div>
                     <div class="mb-3 row">
-                        <label for="inputName" class="col-sm-2 col-form-label">Price</label>
+                        <label for="inputName" class="col-sm-2 col-form-label">Giá</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputName" value={ this.state.txtPrice } onChange={(e) => { this.setState({ txtName: e.target.value }) }} />
+                            <input type="text" class="form-control" id="inputName" value={ this.state.txtPrice } onChange={(e) => { this.setState({ txtPrice: e.target.value }) }} />
                         </div>
                     </div>
                     <div class="mb-3 row">
-                        <label for="inputName" class="col-sm-2 col-form-label">Image</label>
+                        <label for="inputName" class="col-sm-2 col-form-label">Hình ảnh</label>
                         <div class="col-sm-10">
                             <input type="file" name="fileImage" accept="image/jpeg,image/png,image/gif" onChange={(e) => this.previewImage(e) } />
                         </div>
                     </div>
                     <select class="form-select" aria-label="Default select example" onChange={(e) => { this.setState({ cmbCategory: e.target.value }) }}>
-                        <option selected>Category</option>
+                        <option selected>Thể loại</option>
                         { cates }
                     </select>
                     <div class="mb-3 row mt-3">
-                        <label for="inputName" class="col-sm-2 col-form-label">Preview</label>
+                        <label for="inputName" class="col-sm-2 col-form-label">Xem trước</label>
                         <div class="col-sm-10">
                             <img src={ this.state.imgProduct } width="300px" height="300px" alt="" />
                         </div>
                     </div>
                     <div className='d-flex justify-content-center'>
-                        <button type="submit" class="btn btn-primary m-2 table-button" onClick={(e) => this.btnAddClick(e)}>ADD NEW</button>
-                        <button type="submit" class="btn btn-primary m-2 table-button" onClick={(e) => this.btnUpdateClick(e)}>UPDATE</button>
-                        <button type="submit" class="btn btn-primary m-2 table-button" onClick={(e) => this.btnDeleteClick(e)}>DELETE</button>
+                        <button type="submit" class="btn btn-primary m-2 table-button" onClick={(e) => this.btnAddClick(e)}>Thêm Mới</button>
+                        <button type="submit" class="btn btn-primary m-2 table-button" onClick={(e) => this.btnUpdateClick(e)}>Cập Nhật</button>
+                        <button type="submit" class="btn btn-primary m-2 table-button" onClick={(e) => this.btnDeleteClick(e)}>Xóa</button>
                     </div>
                 </form>
             </div>
@@ -152,7 +112,7 @@ class ProductDetail extends Component{
             const prod = { name: name, price: price, category: category, image: image };
             this.apiPostProduct(prod);
         } else {
-            alert('Please input name and price and category and image');
+            alert('Vui lòng nhập đủ các trường dữ liệu: tên, giá, thể loại và hình ảnh!');
         }
     }
         
@@ -168,18 +128,18 @@ class ProductDetail extends Component{
             const prod = { name: name, price: price, category: category, image: image };
             this.apiPutProduct(id, prod);
         } else {
-            alert('Please input id and name and price and category and image');
+            alert('Vui lòng nhập đủ các trường dữ liệu: id, tên, giá, thể loại và hình ảnh!');
         }
     }
 
     btnDeleteClick(e){
         e.preventDefault();
-        if(window.confirm('ARE YOU SURE?')){
+        if(window.confirm('Bạn có chắc muốn xóa sản phẩm này')){
             const id = this.state.txtID;
             if(id){
                 this.apiDeleteProduct(id);
             } else {
-                alert('Please input id');
+                alert('Vui lòng nhập id!');
             }
         }
     }
@@ -198,10 +158,10 @@ class ProductDetail extends Component{
         axios.post('/api/admin/products', prod, config).then((res) => {
             const result = res.data;
             if(result){
-                alert('OK BABY!');
+                alert('Thêm Thành Công');
                 this.apiGetProducts();
             }else{
-                alert('SORRY BABY!');
+                alert('Thêm Không Thành Công. Vui lòng kiểm tra lại thông tin');
             }
         });
     }
@@ -229,10 +189,10 @@ class ProductDetail extends Component{
             const result = res.data;
 
             if(result){
-                alert('OK BABY!');
+                alert('Cập Nhật Thành Công');
                 this.apiGetProducts();
             }else{
-                alert('SORRY BABY!');
+                alert('Cập Nhật Không Thành Công. Vui lòng kiểm tra lại thông tin');
             }
         });
     }
@@ -242,10 +202,10 @@ class ProductDetail extends Component{
         axios.delete('/api/admin/products/' + id, config).then((res) => {
             const result = res.data;
             if(result){
-                alert('OK BABY!');
+                alert('Xóa Thành Công!');
                 this.apiGetProducts();
             } else {
-                alert('SORRY BABY!');
+                alert('Xóa Không Thành Công. Vui lòng kiểm tra lại thông tin');
             }
         });
     }

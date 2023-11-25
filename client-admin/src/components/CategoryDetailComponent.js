@@ -17,24 +17,24 @@ class CategoryDetail extends Component {
     render(){
         return (
             <div className ="float-right">
-                <h2 className="text-center">CATEGORY DETAIL</h2>
+                <h2 className="text-center">Chi Tiết Thể Loại</h2>
                 <form className='form-container'>
                     <div class="mb-3 row">
                         <label for="staticID" class="col-sm-2 col-form-label">ID</label>
                         <div class="col-sm-10">
-                            <input type="text" readonly class="form-control-plaintext" id="staticID" value={ this.state.txtID } onChange={(e) => { this.setState({ txtID: e.target.value }) }}/>
+                            <input type="text" readOnly='true' class="form-control-plaintext" id="staticID" value={ this.state.txtID } onChange={(e) => { this.setState({ txtID: e.target.value }) }}/>
                         </div>
                     </div>
                     <div class="mb-3 row">
-                        <label for="inputName" class="col-sm-2 col-form-label">Name</label>
+                        <label for="inputName" class="col-sm-2 col-form-label">Thể loại</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="inputName" value={ this.state.txtName } onChange={(e) => { this.setState({ txtName: e.target.value }) }} />
                         </div>
                     </div>
                     <div className='d-flex justify-content-center'>
-                        <button type="submit" class="btn btn-primary m-2 table-button" onClick={(e) => this.btnAddClick(e)}>ADD NEW</button>
-                        <button type="submit" class="btn btn-primary m-2 table-button" onClick={(e) => this.btnUpdateClick(e)}>UPDATE</button>
-                        <button type="submit" class="btn btn-primary m-2 table-button" onClick={(e) => this.btnDeleteClick(e)}>DELETE</button>
+                        <button type="submit" class="btn btn-primary m-2 table-button" onClick={(e) => this.btnAddClick(e)}>Thêm mới</button>
+                        <button type="submit" class="btn btn-primary m-2 table-button" onClick={(e) => this.btnUpdateClick(e)}>Cập nhật</button>
+                        <button type="submit" class="btn btn-primary m-2 table-button" onClick={(e) => this.btnDeleteClick(e)}>Xóa</button>
                     </div>
                 </form>
             </div>
@@ -49,7 +49,7 @@ class CategoryDetail extends Component {
             const cate = { name: name };
             this.apiPostCategory(cate);
         } else {
-            alert('Please input name');
+            alert('Vui lòng nhập tên thể loại!');
         }
     }
 
@@ -61,18 +61,18 @@ class CategoryDetail extends Component {
             const cate = { name: name };
             this.apiPutCategory(id, cate);
         } else {
-            alert('Please input id and name');
+            alert('Vui lòng nhập tên và id thể loại!');
         }
     }
 
     btnDeleteClick(e){
         e.preventDefault();
-        if(window.confirm('ARE YOU SURE?')){
+        if(window.confirm('Bạn có chắc muốn xóa thể loại này?')){
             const id = this.state.txtID;
             if(id){
                 this.apiDeleteCategory(id);
             } else {
-                alert('Please input id');
+                alert('Vui lòng nhập id!');
             }
         }
     }
@@ -83,10 +83,10 @@ class CategoryDetail extends Component {
         axios.post('/api/admin/categories', cate, config).then((res) => {
             const result = res.data;
             if(result){
-                alert('OK BABY!');
+                alert('Thêm Thành Công');
                 this.apiGetCategories();
             } else {
-                alert('SORRY BABY!');
+                alert('Thêm Không Thành Công. Vui lòng kiểm tra lại thông tin');
             }
         });
     }
@@ -104,10 +104,10 @@ class CategoryDetail extends Component {
         axios.put('/api/admin/categories/' + id, cate, config).then((res) => {
             const result = res.data;
             if(result){
-                alert('OK BABY!');
+                alert('Cập Nhật Thành Công');
                 this.apiGetCategories();
             } else {
-                alert('SORRY BABY!');
+                alert('Cập Nhật Không Thành Công. Vui lòng kiểm tra lại thông tin');
             }
         });
     }    
@@ -117,10 +117,10 @@ class CategoryDetail extends Component {
         axios.delete('/api/admin/categories/' + id, config).then((res) => {
             const result = res.data;
             if (result) {
-                alert('OK BABY!');
+                alert('Xóa Thành Công!');
                 this.apiGetCategories();
             } else {
-                alert('SORRY BABY!');
+                alert('Xóa Không Thành Công. Vui lòng kiểm tra lại thông tin');
             }
         });
     }

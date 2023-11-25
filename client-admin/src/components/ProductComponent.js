@@ -39,17 +39,17 @@ class Product extends Component{
         });
         return (
             <div class="row table-container">
-                <h2 className="text-center">PRODUCT LIST</h2>
+                <h2 className="text-center">DANH SÁCH SẢN PHẨM</h2>
                 <div class="col-8 col-sm-8 col-md-8 tabledata">
                     <table class="table table-hover col-7">
                         <thead>
                             <tr>
                                 <th scope="col">ID</th>
-                                <th scope="col">Name</th>
-                                <th scope="col">Price</th>
-                                <th scope="col">Creation date</th>
-                                <th scope="col">Category</th>
-                                <th scope="col">Image</th>
+                                <th scope="col">Sản phầm</th>
+                                <th scope="col">Giá</th>
+                                <th scope="col">Ngày khởi tạo</th>
+                                <th scope="col">Thể loại</th>
+                                <th scope="col">Hình ảnh</th>
                             </tr>
                         </thead>
                         <tbody>

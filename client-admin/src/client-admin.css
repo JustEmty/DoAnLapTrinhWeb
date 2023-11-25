@@ -146,7 +146,7 @@
 }
 
 .link-text{
-    padding: 1em 2em;
+    padding: 1em 1.2em;
 }
 
 .link-text:hover{
@@ -239,4 +239,16 @@
     padding-top: 1em;
     cursor: pointer;
     text-align: center;
+}
+
+/* OrderComponent */
+.action{
+    padding: .4em;
+    border-radius: .2em;
+}
+
+.action:hover{
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    transition: all .2s ease-in-out;
 }

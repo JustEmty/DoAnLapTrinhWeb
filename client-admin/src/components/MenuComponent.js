@@ -14,14 +14,14 @@ class Menu extends Component{
                         <img className="nav-logo" src={logo} alt="logo" />
                     </a>
                     <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-                        <li><Link to="/admin/home" class="nav-link padding-nav">Home</Link></li>
-                        <li><Link to="/admin/category" class="nav-link padding-nav">Category</Link></li>
-                        <li><Link to="/admin/product" class="nav-link padding-nav">Product</Link></li>
-                        <li><Link to="/admin/order" class="nav-link padding-nav">Order</Link></li>
-                        <li><Link to="/admin/customer" class="nav-link padding-nav">Customer</Link></li>
+                        <li><Link to="/admin/home" class="nav-link padding-nav">Trang chủ</Link></li>
+                        <li><Link to="/admin/category" class="nav-link padding-nav">Thể loại</Link></li>
+                        <li><Link to="/admin/product" class="nav-link padding-nav">Sản phẩm</Link></li>
+                        <li><Link to="/admin/order" class="nav-link padding-nav">Đơn đặt hàng</Link></li>
+                        <li><Link to="/admin/customer" class="nav-link padding-nav">Khách hàng</Link></li>
                     </ul>
                     <div class="col-md-3 text-end">
-                        <button type="button" class="btn logout-button" onClick={() => this.lnkLogoutClick()}><Link to='/admin/home' className="text-decoration-none logout-text logout-text">Logout</Link></button>
+                        <button type="button" class="btn logout-button" onClick={() => this.lnkLogoutClick()}><Link to='/admin/home' className="text-decoration-none logout-text logout-text">Đăng xuất</Link></button>
                     </div>
                 </header>
             </div>

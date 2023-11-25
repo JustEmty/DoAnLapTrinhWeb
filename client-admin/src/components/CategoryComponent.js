@@ -26,13 +26,13 @@ class Category extends Component {
         });
         return (
             <div class="row table-container">
-                <h2 className="text-center">CATEGORY LIST</h2>
+                <h2 className="text-center">DANH SÁCH CÁC THỂ LOẠI</h2>
                 <div class="col-8 col-sm-8 col-md-8 tabledata">
                     <table class="table table-hover col-7">
                         <thead>
                             <tr>
                                 <th scope="col">ID</th>
-                                <th scope="col">Name</th>
+                                <th scope="col">Thể loại</th>
                             </tr>
                         </thead>
                         <tbody>
