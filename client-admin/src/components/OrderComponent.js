@@ -53,7 +53,7 @@ class Order extends Component {
                     <h2 className="text-center">DANH SÁCH CÁC ĐƠN ĐẶT HÀNG</h2>
                     <div className = "col-8 col-sm-8 col-md-8 tabledata datatable-order">
                         <table className="table table-hover col-7">
-                            <tbody>
+                            <thead>
                                 <tr className="datatable">
                                     <th scope="col">ID</th>
                                     <th scope="col">Ngày khởi tạo</th>
@@ -62,7 +62,9 @@ class Order extends Component {
                                     <th scope="col">Tổng</th>
                                     <th scope="col">Trạng thái</th>
                                     <th scope="col">Thao tác</th>
-                                </tr>
+                                </tr>                           
+                            </thead>
+                            <tbody>
                                 { orders }
                             </tbody>
                         </table>
@@ -74,7 +76,7 @@ class Order extends Component {
                         <h2 className="text-center">Chi Tiết Đơn Đặt Hàng</h2>
                         <div className="col-8 col-sm-8 col-md-8 tabledata datatable-order">
                         <table className="table table-hover col-7">
-                            <tbody>
+                            <thead>
                                 <tr className="datatable">
                                     <th scope="col">No.</th>
                                     <th scope="col">ID sản phẩm</th>
@@ -84,6 +86,8 @@ class Order extends Component {
                                     <th scope="col">Số lượng</th>
                                     <th scope="col">Tổng</th>
                                 </tr>
+                            </thead>
+                            <tbody>
                                 { items }
                             </tbody>
                         </table>

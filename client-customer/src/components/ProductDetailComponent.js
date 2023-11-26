@@ -19,44 +19,62 @@ class ProductDetail extends Component {
         const prod = this.state.product;
         if(prod != null){
             return(
-                <div className="align-center">
-                    <h2 className="text-center">Chi tiết sản phẩm</h2>
-                    <figure className="caption-right">
-                        <img src={"data:image/jpg;base64," + prod.image} width="400px" height="400px" alt="" />
-                        <figcaption>
-                            <form>
-                                <table>
-                                    <tbody>
-                                        <tr>
-                                            <td align="right">ID:</td>
-                                            <td>{ prod._id }</td>
-                                        </tr>
-                                        <tr>
-                                            <td align="right">Tên sản phẩm:</td>
-                                            <td>{ prod.name }</td>
-                                        </tr>
-                                        <tr>
-                                            <td align="right">Giá:</td>
-                                            <td>{ prod.price }</td>
-                                        </tr>
-                                        <tr>
-                                            <td align="right">Thể loại:</td>
-                                            <td>{ prod.category.name }</td>
-                                        </tr>
-                                        <tr>
-                                            <td align="right">Số lượng:</td>
-                                            <td><input type="number" min="1" max="99" value={ this.state.txtQuantity } onChange={(e) => { this.setState({ txtQuantity: e.target.value }) }} /></td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td><input type="submit" value="Thêm giỏ hàng" onClick={(e) => this.btnAdd2CartClick(e)} /></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </form>
-                        </figcaption>
-                    </figure>
-                </div>
+                <section style={{ backgroundColor: '#EAEDFF' }}>
+                    <div className="container py-5">
+                    <div className="row justify-content-center mb-3">
+                      <div className="col-md-12 col-xl-10">
+                        <div className="card shadow-0 border rounded-3">
+                          <div className="card-body">
+                            <div className="row">
+                              <div className="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0">
+                                <div className="bg-image hover-zoom ripple rounded ripple-surface">
+                                <img src={"data:image/jpg;base64," + prod.image} className="w-100" alt="" width="100px" height="250px" />
+                                  <a href="#!">
+                                    <div className="hover-overlay">
+                                      <div className="mask" style={{ backgroundColor: 'rgba(253, 253, 253, 0.15)' }}></div>
+                                    </div>
+                                  </a>
+                                    </div>
+                                        </div>
+                                            <div className="col-md-6 col-lg-6 col-xl-6">
+                                                <tr>
+                                                    <td align="right">ID:</td>
+                                                    <td>{ prod._id }</td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="right">Tên sản phẩm:</td>
+                                                    <td>{ prod.name }</td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="right">Giá:</td>
+                                                    <td>{ prod.price }</td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="right">Thể loại:</td>
+                                                    <td>{ prod.category.name }</td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="right">Số lượng:</td>
+                                                    <td><input type="number" min="1" max="99" value={ this.state.txtQuantity } onChange={(e) => { this.setState({ txtQuantity: e.target.value }) }} /></td>
+                                                </tr>
+                                            </div>
+                                            <div className="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
+                                                <div className="d-flex flex-row align-items-center mb-1">
+                                                    <h4 className="mb-1 me-1">Tổng tiền: {prod.price*this.state.txtQuantity}</h4>
+                                                    <span className="text-danger"><s>{/* Add your original price here */}</s></span>
+                                                </div>
+                                                <div className="d-flex flex-column mt-4">
+                                                  <button className="btn btn-primary btn-sm" type="button" onClick={(e) => this.btnAdd2CartClick(e)}>Thêm giỏ hàng</button>
+                                                  {/* Add your "Add to wishlist" button here */}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             );
         }
         return(<div />);

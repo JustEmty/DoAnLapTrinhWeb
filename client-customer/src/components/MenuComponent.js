@@ -18,11 +18,9 @@ class Menu extends Component {
     }
 
     render(){
-        const cates = this.state.categories.map((item) => {
-            return(
-                <li key={ item._id }><Link to={'/product/category/' + item._id} class="nav-link active item-dropdown">{ item.name }</Link></li>
-            );
-        });
+        const cates = this.state.categories.map((item) => (
+            <li key={item._id}><Link to={'/product/category/' + item._id} className="nav-link active item-dropdown">{item.name}</Link></li>
+        ));
 
         return (
                 <nav className="navbar sticky-top navbar-expand-lg nav-menu">
@@ -36,12 +34,12 @@ class Menu extends Component {
                                 <li className="nav-item">
                                     <Link to='/home' className="nav-link padding-nav" aria-current="page">Trang chủ</Link>
                                 </li>
-                                <li className="nav-item dropdown">
-                                    <Link className="nav-link padding-nav dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Thể loại</Link>
-                                    <ul className="dropdown-menu bg-warning" aria-labelledby="navbarScrollingDropdown">
-                                        { cates }
-                                    </ul>
-                                </li>
+                                <li className="nav-item dropdown" onMouseOver={() => this.handleDropdownHover(true)} onMouseLeave={() => this.handleDropdownHover(false)}>
+                            <Link className="nav-link padding-nav dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Thể loại</Link>
+                            <ul className={`dropdown-menu bg-warning ${this.state.isDropdownHovered ? 'show' : ''}`} aria-labelledby="navbarScrollingDropdown">
+                                {cates}
+                            </ul>
+                        </li>
                                 <li className="nav-item">
                                     <Link to='/mycart' className="nav-link padding-nav">Giỏ hàng ({this.context.mycart.length})</Link>
                                 </li>
@@ -68,7 +66,9 @@ class Menu extends Component {
         e.preventDefault();
         this.props.navigate('/product/search/' + this.state.txtKeyword);
     }
-
+    handleDropdownHover(isHovered) {
+        this.setState({ isDropdownHovered: isHovered });
+    }
     // apis
     apiGetCategories(){
         axios.get('/api/customer/categories').then((res) => {
