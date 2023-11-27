@@ -36,7 +36,7 @@ class ProductDetail extends Component {
                                   </a>
                                     </div>
                                         </div>
-                                            <div className="col-md-6 col-lg-6 col-xl-6">
+                                            <div className="col-md-6 col-lg-6 col-xl-6 detail-container">
                                                 <tr>
                                                     <td align="right">ID:</td>
                                                     <td>{ prod._id }</td>
@@ -60,11 +60,11 @@ class ProductDetail extends Component {
                                             </div>
                                             <div className="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
                                                 <div className="d-flex flex-row align-items-center mb-1">
-                                                    <h4 className="mb-1 me-1">Tổng tiền: {prod.price*this.state.txtQuantity}</h4>
+                                                    <h4 className="mb-1 me-1 total-h4">Tổng tiền: {prod.price*this.state.txtQuantity}</h4>
                                                     <span className="text-danger"><s>{/* Add your original price here */}</s></span>
                                                 </div>
-                                                <div className="d-flex flex-column mt-4">
-                                                  <button className="btn btn-primary btn-sm" type="button" onClick={(e) => this.btnAdd2CartClick(e)}>Thêm giỏ hàng</button>
+                                                <div className="d-flex flex-column mt-4 add-product-button">
+                                                  <button className="btn btn-sm" type="button" onClick={(e) => this.btnAdd2CartClick(e)}>Thêm giỏ hàng</button>
                                                   {/* Add your "Add to wishlist" button here */}
                                                 </div>
                                             </div>
