@@ -44,7 +44,7 @@ class Mycart extends Component {
                             { mycart }
                             <tr>
                                 <td colSpan="6" ></td>
-                                <td>Total</td>
+                                <td>Tổng Cộng</td>
                                 <td>{ CartUtil.getTotal(this.context.mycart) }</td>
                                 <td><button type="button" className="checkout-button" onClick={() => this.lnkCheckoutClick()}>Thanh toán</button></td>
                             </tr>
