@@ -25,7 +25,7 @@ class Order extends Component {
                     <td>{ item.total }</td>
                     <td>{ item.status }</td>
                     <td>
-                        { item.status === 'PENDING' ?
+                        { item.status === 'Chưa giải quyết' ?
                         <div><span className="link action" onClick={() => this.lnkApproveClick(item._id)}>Chấp Nhận</span> || <span className="link action" onClick={() => this.lnkCancelClick(item._id)}>Hủy</span></div>
                        : <div />}
                     </td>
