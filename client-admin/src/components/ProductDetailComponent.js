@@ -21,7 +21,7 @@ class ProductDetail extends Component{
     render(){
         const cates = this.state.categories.map((cate) => {
             if(this.props.item != null){
-                return(<option key={ cate._id } value={ cate._id } selected={ cate._id === this.props.item.category._id } >{ cate.name }</option>);
+                return(<option className="categories" key={ cate._id } value={ cate._id } selected={ cate._id === this.props.item.category._id } >{ cate.name }</option>);
             } else {
                 return(<option key={ cate._id } value={ cate._id } >{ cate.name } </option>);
             }
@@ -45,7 +45,7 @@ class ProductDetail extends Component{
                     <div class="mb-3 row">
                         <label for="inputName" class="col-sm-2 col-form-label">Giá</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputName" value={ this.state.txtPrice } onChange={(e) => { this.setState({ txtPrice: e.target.value }) }} />
+                            <input type="text" class="form-control" id="inputCost" value={ this.state.txtPrice } onChange={(e) => { this.setState({ txtPrice: e.target.value }) }} />
                         </div>
                     </div>
                     <div class="mb-3 row">
@@ -65,9 +65,9 @@ class ProductDetail extends Component{
                         </div>
                     </div>
                     <div className='d-flex justify-content-center'>
-                        <button type="submit" class="btn btn-primary m-2 table-button" onClick={(e) => this.btnAddClick(e)}>Thêm Mới</button>
-                        <button type="submit" class="btn btn-primary m-2 table-button" onClick={(e) => this.btnUpdateClick(e)}>Cập Nhật</button>
-                        <button type="submit" class="btn btn-primary m-2 table-button" onClick={(e) => this.btnDeleteClick(e)}>Xóa</button>
+                        <button type="submit" id="btn_add" class="btn btn-primary m-2 table-button" onClick={(e) => this.btnAddClick(e)}>Thêm Mới</button>
+                        <button type="submit" id="btn_update" class="btn btn-primary m-2 table-button" onClick={(e) => this.btnUpdateClick(e)}>Cập Nhật</button>
+                        <button type="submit" id="btn_delete" class="btn btn-primary m-2 table-button" onClick={(e) => this.btnDeleteClick(e)}>Xóa</button>
                     </div>
                 </form>
             </div>
