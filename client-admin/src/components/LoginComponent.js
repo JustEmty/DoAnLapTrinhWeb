@@ -31,7 +31,7 @@ class  Login extends Component{
                             <input type="password" class="form-control" id="floatingPassword" placeholder="Mật khẩu" value={ this.state.txtPassword } onChange={(e) => { this.setState({ txtPassword: e.target.value }) }} />
                             <label for="floatingPassword">Mật khẩu</label>
                         </div>
-                        <button class="w-100 btn btn-lg btn-primary mt-4 signin-button" type="submit" onClick={(e) => this.btnLoginClick(e)}>Đăng Nhập</button>
+                        <button class="w-100 btn btn-lg btn-primary mt-4 signin-button" type="submit" id="btn_signin" onClick={(e) => this.btnLoginClick(e)}>Đăng Nhập</button>
                     </form>
                 </div>
             );

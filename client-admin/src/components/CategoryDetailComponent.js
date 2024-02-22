@@ -32,9 +32,9 @@ class CategoryDetail extends Component {
                         </div>
                     </div>
                     <div className='d-flex justify-content-center'>
-                        <button type="submit" class="btn btn-primary m-2 table-button" onClick={(e) => this.btnAddClick(e)}>Thêm mới</button>
-                        <button type="submit" class="btn btn-primary m-2 table-button" onClick={(e) => this.btnUpdateClick(e)}>Cập nhật</button>
-                        <button type="submit" class="btn btn-primary m-2 table-button" onClick={(e) => this.btnDeleteClick(e)}>Xóa</button>
+                        <button type="submit" id="btn_add" class="btn btn-primary m-2 table-button" onClick={(e) => this.btnAddClick(e)}>Thêm mới</button>
+                        <button type="submit" id="btn_update" class="btn btn-primary m-2 table-button" onClick={(e) => this.btnUpdateClick(e)}>Cập nhật</button>
+                        <button type="submit" id="btn_delete" class="btn btn-primary m-2 table-button" onClick={(e) => this.btnDeleteClick(e)}>Xóa</button>
                     </div>
                 </form>
             </div>
