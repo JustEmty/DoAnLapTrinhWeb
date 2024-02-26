@@ -80,7 +80,7 @@ class Home extends Component {
                     )}
                   </div>
                   <div className="col-lg-6">
-                    <h1 className="display-5 lh-1 mb-3">"Việc đọc sách rất quan trọng. Nếu bạn biết cách đọc sách, cả thế giới sẽ mở ra cho bạn."</h1>
+                    <h1 className="display-5 lh-1 mb-3" id="chamngon">"Việc đọc sách rất quan trọng. Nếu bạn biết cách đọc sách, cả thế giới sẽ mở ra cho bạn."</h1>
                     <p className="lead">- Barack Obama</p>
                     <div className="d-grid gap-2 d-md-flex justify-content-md-start">
                       <button type="button" className="btn btn-lg px-4 me-md-2" onClick={this.handleDiscoverClick}>Khám phá ngay</button>
