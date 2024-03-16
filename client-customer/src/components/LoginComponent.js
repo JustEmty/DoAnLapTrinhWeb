@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import MyContext from '../contexts/MyContext';
 import withRouter from '../utils/withRouter';
 import logo from '../assets/Logo.jpg';
-
+import {Helmet} from "react-helmet";
 class Login extends Component {
     
     static contextType = MyContext; // using this . context to access global state
@@ -19,6 +19,10 @@ class Login extends Component {
     render(){
         return(
             <div className='login-container'>
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <title>Đăng nhập</title>
+                </Helmet>
                 <form className='form-login'>
                     <div className='logo-container'>
                         <img className='logo' src={logo} alt='logo' />
