@@ -3,7 +3,7 @@ import MyContext from '../contexts/MyContext';
 import CartUtil from '../utils/CartUtil';
 import axios from 'axios';
 import withRouter from '../utils/withRouter';
-
+import {Helmet} from "react-helmet";
 class Mycart extends Component {
 
     static contextType = MyContext; // using this . context to access global state
@@ -26,6 +26,10 @@ class Mycart extends Component {
         });
         return(
             <div class="row table-container">
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <title>Giỏ hàng</title>
+                </Helmet>
                 <h2 className="text-center">Danh sách sản phẩm</h2>
                 <div class="col-8 col-sm-8 col-md-8 tabledata">
                     <table class="table table-hover col-7">
