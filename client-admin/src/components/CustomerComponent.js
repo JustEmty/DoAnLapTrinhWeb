@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { Component } from 'react';
 import MyContext from '../contexts/MyContext';
-
+import {Helmet} from "react-helmet";
 class Customer extends Component {
 
     static contextType = MyContext ; // using this . context to access global state
@@ -65,6 +65,10 @@ class Customer extends Component {
         return (
             <div class ="table-container">
                 <div className="align-center">
+                    <Helmet>
+                        <meta charSet="utf-8" />
+                        <title>Quản Lý Khách Hàng</title>
+                    </Helmet>
                     <h2 className="text-center">DANH SÁCH KHÁCH HÀNG</h2>
                     <div className = "col-8 col-sm-8 col-md-8 tabledata datatable-order">
                         <table className="table table-hover col-7">
