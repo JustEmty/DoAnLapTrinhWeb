@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { Component } from 'react';
 import logo from '../assets/Logo.jpg';
+import {Helmet} from "react-helmet";
 
 class Signup extends Component {
 
@@ -18,6 +19,10 @@ class Signup extends Component {
     render(){
         return(
             <div className='signup-container'>
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <title>Đăng ký</title>
+                </Helmet>
                 <form className='form-signup'>
                     <div className='logo-container'>
                         <img className='logo' src={logo} alt='logo' />
