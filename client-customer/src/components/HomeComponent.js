@@ -1,7 +1,8 @@
 import axios from 'axios';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import "../home.css"
+import "../home.css";
+import {Helmet} from "react-helmet";
 class Home extends Component {
 
     constructor(props){
@@ -69,6 +70,10 @@ class Home extends Component {
         });
         return (
           <div>
+            <Helmet>
+              <meta charSet="utf-8" />
+              <title>Trang chủ</title>
+            </Helmet>
             <div className='hero-container'>
               <div className="container col-xxl-8 px-4 py-5">
                 <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
