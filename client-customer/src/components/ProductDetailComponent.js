@@ -2,7 +2,8 @@ import axios from 'axios';
 import React, { Component } from 'react';
 import withRouter from '../utils/withRouter';
 import MyContext from '../contexts/MyContext';
-import "../ProductDetail.css"
+import "../ProductDetail.css";
+import {Helmet} from "react-helmet";
 class ProductDetail extends Component {
 
     static contextType = MyContext; // using this . context to access global state
@@ -20,6 +21,10 @@ class ProductDetail extends Component {
         if(prod != null){
             return(
                 <section style={{ backgroundColor: '#EAEDFF' }}>
+                    <Helmet>
+                        <meta charSet="utf-8" />
+                        <title>{ prod.name }</title>
+                    </Helmet>
                     <div className="container py-5">
                     <div className="row justify-content-center mb-3">
                       <div className="col-md-12 col-xl-10">
