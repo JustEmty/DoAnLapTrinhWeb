@@ -2,13 +2,17 @@ import React, { Component } from "react";
 import MyContext from "../contexts/MyContext";
 import { Link } from 'react-router-dom';
 import logo from '../assets/Logo.jpg'
-
+import {Helmet} from "react-helmet";
 class Menu extends Component{
     static contextType = MyContext; // using this.context to access global state
     
     render(){
         return (
             <div class="container-flur container-header">
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <title>Trang chủ</title>
+                </Helmet>
                 <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4">
                     <a href="/admin/home" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
                         <img className="nav-logo" src={logo} alt="logo" />
