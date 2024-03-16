@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { Component } from 'react';
-
+import {Helmet} from "react-helmet";
 class Active extends Component {
     
     constructor(props){
@@ -14,6 +14,10 @@ class Active extends Component {
     render(){
         return(
             <div className='active-container'>
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <title>Xác nhận tài khoản</title>
+                </Helmet>
                 <form className='form-active'>
                     <h1 class="h3 mb-3 fw-normal text-center">Xác thực tài khoản</h1>
                     <div class="form-floating mt-2">
