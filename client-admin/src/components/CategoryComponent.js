@@ -26,6 +26,10 @@ class Category extends Component {
         });
         return (
             <div class="row table-container">
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <title>Quản Lý Thể Loại</title>
+                </Helmet>
                 <h2 className="text-center">DANH SÁCH CÁC THỂ LOẠI</h2>
                 <div class="col-8 col-sm-8 col-md-8 tabledata">
                     <table class="table table-hover col-7">
