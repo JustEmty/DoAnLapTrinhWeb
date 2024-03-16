@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { Component } from 'react';
 import { Navigate } from 'react-router-dom';
 import MyContext from '../contexts/MyContext';
-
+import {Helmet} from "react-helmet";
 class Myprofile extends Component {
 
     static contextType = MyContext; // using this.context to access global state
@@ -22,6 +22,10 @@ class Myprofile extends Component {
         if (this.context.token === '') return (<Navigate replace to='/login' />);
         return (
             <div className='myprofile-container'>
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <title>Tài khoản của tôi</title>
+                </Helmet>
                 <form className='form-myprofile'>
                     <h1 className="h3 mb-3 fw-normal text-center">Tài khoản của tôi</h1>
                     <div class="form-floating mt-2">
